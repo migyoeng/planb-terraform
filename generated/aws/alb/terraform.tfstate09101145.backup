@@ -1,0 +1,811 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.1",
+  "serial": 3,
+  "lineage": "18d37504-4024-97fd-d86f-ed7b19f46a85",
+  "outputs": {
+    "aws_lb_listener_rule_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-36cb0d9ace7968a7_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/36cb0d9ace7968a7",
+      "type": "string"
+    },
+    "aws_lb_listener_rule_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-4c04beb0de18890d_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/4c04beb0de18890d",
+      "type": "string"
+    },
+    "aws_lb_listener_rule_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-786e1888f62a53e0_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/786e1888f62a53e0",
+      "type": "string"
+    },
+    "aws_lb_listener_rule_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-d4ec987314ed6bf6_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/d4ec987314ed6bf6",
+      "type": "string"
+    },
+    "aws_lb_listener_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+      "type": "string"
+    },
+    "aws_lb_listener_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-info-final-002F-5bd164072db03311-002F-4d7fb2ef91a33eab_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/info-final/5bd164072db03311/4d7fb2ef91a33eab",
+      "type": "string"
+    },
+    "aws_lb_target_group_attachment_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-Board-TG-002F-2496cc953a68f155-10-002E-100-002E-128-002E-252_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155-10.100.128.252",
+      "type": "string"
+    },
+    "aws_lb_target_group_attachment_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-Event-TG-002F-be5b96b559965beb-10-002E-100-002E-144-002E-20_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb-10.100.144.20",
+      "type": "string"
+    },
+    "aws_lb_target_group_attachment_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-User-TG-002F-31e8920beb393a4f-10-002E-100-002E-153-002E-15_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f-10.100.153.15",
+      "type": "string"
+    },
+    "aws_lb_target_group_attachment_tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-info-final-002F-de115e9d504e7a24-192-002E-168-002E-20-002E-190_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24-192.168.20.190",
+      "type": "string"
+    },
+    "aws_lb_target_group_tfer--Board-TG_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+      "type": "string"
+    },
+    "aws_lb_target_group_tfer--Event-TG_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+      "type": "string"
+    },
+    "aws_lb_target_group_tfer--News-TG_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89",
+      "type": "string"
+    },
+    "aws_lb_target_group_tfer--User-TG_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+      "type": "string"
+    },
+    "aws_lb_target_group_tfer--info-final_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+      "type": "string"
+    },
+    "aws_lb_tfer--DugOut-ALB_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+      "type": "string"
+    },
+    "aws_lb_tfer--info-final_id": {
+      "value": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/info-final/5bd164072db03311",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_lb",
+      "name": "tfer--info-final",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "access_logs.#": "1",
+            "access_logs.0.bucket": "",
+            "access_logs.0.enabled": "false",
+            "access_logs.0.prefix": "",
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/info-final/5bd164072db03311",
+            "arn_suffix": "app/info-final/5bd164072db03311",
+            "client_keep_alive": "3600",
+            "connection_logs.#": "1",
+            "connection_logs.0.bucket": "",
+            "connection_logs.0.enabled": "false",
+            "connection_logs.0.prefix": "",
+            "customer_owned_ipv4_pool": "",
+            "desync_mitigation_mode": "defensive",
+            "dns_name": "internal-info-final-1765350941.ap-northeast-2.elb.amazonaws.com",
+            "drop_invalid_header_fields": "false",
+            "enable_cross_zone_load_balancing": "true",
+            "enable_deletion_protection": "false",
+            "enable_http2": "true",
+            "enable_tls_version_and_cipher_suite_headers": "false",
+            "enable_waf_fail_open": "false",
+            "enable_xff_client_port": "false",
+            "enable_zonal_shift": "false",
+            "enforce_security_group_inbound_rules_on_private_link_traffic": "",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/info-final/5bd164072db03311",
+            "idle_timeout": "60",
+            "internal": "true",
+            "ip_address_type": "ipv4",
+            "ipam_pools.#": "0",
+            "load_balancer_type": "application",
+            "minimum_load_balancer_capacity.#": "0",
+            "name": "info-final",
+            "name_prefix": "",
+            "preserve_host_header": "false",
+            "region": "ap-northeast-2",
+            "security_groups.#": "1",
+            "security_groups.0": "sg-04de431b39e807229",
+            "subnet_mapping.#": "2",
+            "subnet_mapping.0.allocation_id": "",
+            "subnet_mapping.0.ipv6_address": "",
+            "subnet_mapping.0.outpost_id": "",
+            "subnet_mapping.0.private_ipv4_address": "",
+            "subnet_mapping.0.subnet_id": "subnet-00258c4a6ac72c4ce",
+            "subnet_mapping.1.allocation_id": "",
+            "subnet_mapping.1.ipv6_address": "",
+            "subnet_mapping.1.outpost_id": "",
+            "subnet_mapping.1.private_ipv4_address": "",
+            "subnet_mapping.1.subnet_id": "subnet-0e08b5b05fdad2efc",
+            "subnets.#": "2",
+            "subnets.0": "subnet-00258c4a6ac72c4ce",
+            "subnets.1": "subnet-0e08b5b05fdad2efc",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "vpc_id": "vpc-0e043d21f57c0703e",
+            "xff_header_processing_mode": "append",
+            "zone_id": "ZWKZPGTI48KDX"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "default_action.#": "1",
+            "default_action.0.authenticate_cognito.#": "0",
+            "default_action.0.authenticate_oidc.#": "0",
+            "default_action.0.fixed_response.#": "0",
+            "default_action.0.forward.#": "0",
+            "default_action.0.order": "1",
+            "default_action.0.redirect.#": "1",
+            "default_action.0.redirect.0.host": "d18wspy7xouagh.cloudfront.net",
+            "default_action.0.redirect.0.path": "/#{path}",
+            "default_action.0.redirect.0.port": "#{port}",
+            "default_action.0.redirect.0.protocol": "HTTPS",
+            "default_action.0.redirect.0.query": "#{query}",
+            "default_action.0.redirect.0.status_code": "HTTP_302",
+            "default_action.0.target_group_arn": "",
+            "default_action.0.type": "redirect",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "load_balancer_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+            "mutual_authentication.#": "0",
+            "port": "80",
+            "protocol": "HTTP",
+            "region": "ap-northeast-2",
+            "routing_http_response_access_control_allow_credentials_header_value": "",
+            "routing_http_response_access_control_allow_headers_header_value": "",
+            "routing_http_response_access_control_allow_methods_header_value": "",
+            "routing_http_response_access_control_allow_origin_header_value": "",
+            "routing_http_response_access_control_expose_headers_header_value": "",
+            "routing_http_response_access_control_max_age_header_value": "",
+            "routing_http_response_content_security_policy_header_value": "",
+            "routing_http_response_server_enabled": "true",
+            "routing_http_response_strict_transport_security_header_value": "",
+            "routing_http_response_x_content_type_options_header_value": "",
+            "routing_http_response_x_frame_options_header_value": "",
+            "ssl_policy": "",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-info-final-002F-5bd164072db03311-002F-4d7fb2ef91a33eab",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/info-final/5bd164072db03311/4d7fb2ef91a33eab",
+            "default_action.#": "1",
+            "default_action.0.authenticate_cognito.#": "0",
+            "default_action.0.authenticate_oidc.#": "0",
+            "default_action.0.fixed_response.#": "0",
+            "default_action.0.forward.#": "1",
+            "default_action.0.forward.0.stickiness.#": "1",
+            "default_action.0.forward.0.stickiness.0.duration": "0",
+            "default_action.0.forward.0.stickiness.0.enabled": "false",
+            "default_action.0.forward.0.target_group.#": "1",
+            "default_action.0.forward.0.target_group.0.arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+            "default_action.0.forward.0.target_group.0.weight": "1",
+            "default_action.0.order": "0",
+            "default_action.0.redirect.#": "0",
+            "default_action.0.target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+            "default_action.0.type": "forward",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/info-final/5bd164072db03311/4d7fb2ef91a33eab",
+            "load_balancer_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/info-final/5bd164072db03311",
+            "mutual_authentication.#": "0",
+            "port": "8004",
+            "protocol": "HTTP",
+            "region": "ap-northeast-2",
+            "routing_http_response_access_control_allow_credentials_header_value": "",
+            "routing_http_response_access_control_allow_headers_header_value": "",
+            "routing_http_response_access_control_allow_methods_header_value": "",
+            "routing_http_response_access_control_allow_origin_header_value": "",
+            "routing_http_response_access_control_expose_headers_header_value": "",
+            "routing_http_response_access_control_max_age_header_value": "",
+            "routing_http_response_content_security_policy_header_value": "",
+            "routing_http_response_server_enabled": "true",
+            "routing_http_response_strict_transport_security_header_value": "",
+            "routing_http_response_x_content_type_options_header_value": "",
+            "routing_http_response_x_frame_options_header_value": "",
+            "ssl_policy": "",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener_rule",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-36cb0d9ace7968a7",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "action.#": "1",
+            "action.0.authenticate_cognito.#": "0",
+            "action.0.authenticate_oidc.#": "0",
+            "action.0.fixed_response.#": "0",
+            "action.0.forward.#": "1",
+            "action.0.forward.0.stickiness.#": "1",
+            "action.0.forward.0.stickiness.0.duration": "3600",
+            "action.0.forward.0.stickiness.0.enabled": "false",
+            "action.0.forward.0.target_group.#": "1",
+            "action.0.forward.0.target_group.0.arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+            "action.0.forward.0.target_group.0.weight": "1",
+            "action.0.order": "1",
+            "action.0.redirect.#": "0",
+            "action.0.target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+            "action.0.type": "forward",
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/36cb0d9ace7968a7",
+            "condition.#": "1",
+            "condition.0.host_header.#": "0",
+            "condition.0.http_header.#": "0",
+            "condition.0.http_request_method.#": "0",
+            "condition.0.path_pattern.#": "1",
+            "condition.0.path_pattern.0.values.#": "1",
+            "condition.0.path_pattern.0.values.0": "/api/board/*",
+            "condition.0.query_string.#": "0",
+            "condition.0.source_ip.#": "0",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/36cb0d9ace7968a7",
+            "listener_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "priority": "2",
+            "region": "ap-northeast-2",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener_rule",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-4c04beb0de18890d",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "action.#": "1",
+            "action.0.authenticate_cognito.#": "0",
+            "action.0.authenticate_oidc.#": "0",
+            "action.0.fixed_response.#": "0",
+            "action.0.forward.#": "1",
+            "action.0.forward.0.stickiness.#": "1",
+            "action.0.forward.0.stickiness.0.duration": "3600",
+            "action.0.forward.0.stickiness.0.enabled": "false",
+            "action.0.forward.0.target_group.#": "1",
+            "action.0.forward.0.target_group.0.arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+            "action.0.forward.0.target_group.0.weight": "1",
+            "action.0.order": "1",
+            "action.0.redirect.#": "0",
+            "action.0.target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+            "action.0.type": "forward",
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/4c04beb0de18890d",
+            "condition.#": "1",
+            "condition.0.host_header.#": "0",
+            "condition.0.http_header.#": "0",
+            "condition.0.http_request_method.#": "0",
+            "condition.0.path_pattern.#": "1",
+            "condition.0.path_pattern.0.values.#": "1",
+            "condition.0.path_pattern.0.values.0": "/api/user/*",
+            "condition.0.query_string.#": "0",
+            "condition.0.source_ip.#": "0",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/4c04beb0de18890d",
+            "listener_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "priority": "1",
+            "region": "ap-northeast-2",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener_rule",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-786e1888f62a53e0",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "action.#": "1",
+            "action.0.authenticate_cognito.#": "0",
+            "action.0.authenticate_oidc.#": "0",
+            "action.0.fixed_response.#": "0",
+            "action.0.forward.#": "1",
+            "action.0.forward.0.stickiness.#": "1",
+            "action.0.forward.0.stickiness.0.duration": "3600",
+            "action.0.forward.0.stickiness.0.enabled": "false",
+            "action.0.forward.0.target_group.#": "1",
+            "action.0.forward.0.target_group.0.arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89",
+            "action.0.forward.0.target_group.0.weight": "1",
+            "action.0.order": "1",
+            "action.0.redirect.#": "0",
+            "action.0.target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89",
+            "action.0.type": "forward",
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/786e1888f62a53e0",
+            "condition.#": "1",
+            "condition.0.host_header.#": "0",
+            "condition.0.http_header.#": "0",
+            "condition.0.http_request_method.#": "0",
+            "condition.0.path_pattern.#": "1",
+            "condition.0.path_pattern.0.values.#": "1",
+            "condition.0.path_pattern.0.values.0": "/api/news/*",
+            "condition.0.query_string.#": "0",
+            "condition.0.source_ip.#": "0",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/786e1888f62a53e0",
+            "listener_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "priority": "4",
+            "region": "ap-northeast-2",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_listener_rule",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-d4ec987314ed6bf6",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "action.#": "1",
+            "action.0.authenticate_cognito.#": "0",
+            "action.0.authenticate_oidc.#": "0",
+            "action.0.fixed_response.#": "0",
+            "action.0.forward.#": "1",
+            "action.0.forward.0.stickiness.#": "1",
+            "action.0.forward.0.stickiness.0.duration": "3600",
+            "action.0.forward.0.stickiness.0.enabled": "false",
+            "action.0.forward.0.target_group.#": "1",
+            "action.0.forward.0.target_group.0.arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+            "action.0.forward.0.target_group.0.weight": "1",
+            "action.0.order": "1",
+            "action.0.redirect.#": "0",
+            "action.0.target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+            "action.0.type": "forward",
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/d4ec987314ed6bf6",
+            "condition.#": "1",
+            "condition.0.host_header.#": "0",
+            "condition.0.http_header.#": "0",
+            "condition.0.http_request_method.#": "0",
+            "condition.0.path_pattern.#": "1",
+            "condition.0.path_pattern.0.values.#": "1",
+            "condition.0.path_pattern.0.values.0": "/api/event/*",
+            "condition.0.query_string.#": "0",
+            "condition.0.source_ip.#": "0",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener-rule/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d/d4ec987314ed6bf6",
+            "listener_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:listener/app/DugOut-ALB/4e16ac14fd6170cb/bd349d80f006d85d",
+            "priority": "3",
+            "region": "ap-northeast-2",
+            "tags.%": "0",
+            "tags_all.%": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group",
+      "name": "tfer--Board-TG",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+            "arn_suffix": "targetgroup/Board-TG/2496cc953a68f155",
+            "deregistration_delay": "300",
+            "health_check.#": "1",
+            "health_check.0.enabled": "true",
+            "health_check.0.healthy_threshold": "5",
+            "health_check.0.interval": "30",
+            "health_check.0.matcher": "200",
+            "health_check.0.path": "/healthz",
+            "health_check.0.port": "traffic-port",
+            "health_check.0.protocol": "HTTP",
+            "health_check.0.timeout": "5",
+            "health_check.0.unhealthy_threshold": "2",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+            "ip_address_type": "ipv4",
+            "load_balancer_arns.#": "1",
+            "load_balancer_arns.0": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+            "load_balancing_algorithm_type": "round_robin",
+            "load_balancing_anomaly_mitigation": "off",
+            "load_balancing_cross_zone_enabled": "use_load_balancer_configuration",
+            "name": "Board-TG",
+            "name_prefix": "",
+            "port": "8000",
+            "protocol": "HTTP",
+            "protocol_version": "HTTP1",
+            "region": "ap-northeast-2",
+            "slow_start": "0",
+            "stickiness.#": "1",
+            "stickiness.0.cookie_duration": "86400",
+            "stickiness.0.cookie_name": "",
+            "stickiness.0.enabled": "false",
+            "stickiness.0.type": "lb_cookie",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "target_failover.#": "1",
+            "target_group_health.#": "1",
+            "target_group_health.0.dns_failover.#": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_percentage": "off",
+            "target_group_health.0.unhealthy_state_routing.#": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_percentage": "off",
+            "target_health_state.#": "1",
+            "target_type": "ip",
+            "vpc_id": "vpc-0e043d21f57c0703e"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group",
+      "name": "tfer--Event-TG",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+            "arn_suffix": "targetgroup/Event-TG/be5b96b559965beb",
+            "deregistration_delay": "300",
+            "health_check.#": "1",
+            "health_check.0.enabled": "true",
+            "health_check.0.healthy_threshold": "5",
+            "health_check.0.interval": "30",
+            "health_check.0.matcher": "200",
+            "health_check.0.path": "/healthz",
+            "health_check.0.port": "traffic-port",
+            "health_check.0.protocol": "HTTP",
+            "health_check.0.timeout": "5",
+            "health_check.0.unhealthy_threshold": "2",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+            "ip_address_type": "ipv4",
+            "load_balancer_arns.#": "1",
+            "load_balancer_arns.0": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+            "load_balancing_algorithm_type": "round_robin",
+            "load_balancing_anomaly_mitigation": "off",
+            "load_balancing_cross_zone_enabled": "use_load_balancer_configuration",
+            "name": "Event-TG",
+            "name_prefix": "",
+            "port": "8002",
+            "protocol": "HTTP",
+            "protocol_version": "HTTP1",
+            "region": "ap-northeast-2",
+            "slow_start": "0",
+            "stickiness.#": "1",
+            "stickiness.0.cookie_duration": "86400",
+            "stickiness.0.cookie_name": "",
+            "stickiness.0.enabled": "false",
+            "stickiness.0.type": "lb_cookie",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "target_failover.#": "1",
+            "target_group_health.#": "1",
+            "target_group_health.0.dns_failover.#": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_percentage": "off",
+            "target_group_health.0.unhealthy_state_routing.#": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_percentage": "off",
+            "target_health_state.#": "1",
+            "target_type": "ip",
+            "vpc_id": "vpc-0e043d21f57c0703e"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group",
+      "name": "tfer--News-TG",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89",
+            "arn_suffix": "targetgroup/News-TG/8b247acc3eb36d89",
+            "deregistration_delay": "300",
+            "health_check.#": "1",
+            "health_check.0.enabled": "true",
+            "health_check.0.healthy_threshold": "5",
+            "health_check.0.interval": "30",
+            "health_check.0.matcher": "200",
+            "health_check.0.path": "/healthz",
+            "health_check.0.port": "traffic-port",
+            "health_check.0.protocol": "HTTP",
+            "health_check.0.timeout": "5",
+            "health_check.0.unhealthy_threshold": "2",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89",
+            "ip_address_type": "ipv4",
+            "load_balancer_arns.#": "1",
+            "load_balancer_arns.0": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+            "load_balancing_algorithm_type": "round_robin",
+            "load_balancing_anomaly_mitigation": "off",
+            "load_balancing_cross_zone_enabled": "use_load_balancer_configuration",
+            "name": "News-TG",
+            "name_prefix": "",
+            "port": "8003",
+            "protocol": "HTTP",
+            "protocol_version": "HTTP1",
+            "region": "ap-northeast-2",
+            "slow_start": "0",
+            "stickiness.#": "1",
+            "stickiness.0.cookie_duration": "86400",
+            "stickiness.0.cookie_name": "",
+            "stickiness.0.enabled": "false",
+            "stickiness.0.type": "lb_cookie",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "target_failover.#": "1",
+            "target_group_health.#": "1",
+            "target_group_health.0.dns_failover.#": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_percentage": "off",
+            "target_group_health.0.unhealthy_state_routing.#": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_percentage": "off",
+            "target_health_state.#": "1",
+            "target_type": "ip",
+            "vpc_id": "vpc-0e043d21f57c0703e"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group",
+      "name": "tfer--User-TG",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+            "arn_suffix": "targetgroup/User-TG/31e8920beb393a4f",
+            "deregistration_delay": "300",
+            "health_check.#": "1",
+            "health_check.0.enabled": "true",
+            "health_check.0.healthy_threshold": "5",
+            "health_check.0.interval": "30",
+            "health_check.0.matcher": "200",
+            "health_check.0.path": "/healthz",
+            "health_check.0.port": "traffic-port",
+            "health_check.0.protocol": "HTTP",
+            "health_check.0.timeout": "5",
+            "health_check.0.unhealthy_threshold": "2",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+            "ip_address_type": "ipv4",
+            "load_balancer_arns.#": "1",
+            "load_balancer_arns.0": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/DugOut-ALB/4e16ac14fd6170cb",
+            "load_balancing_algorithm_type": "round_robin",
+            "load_balancing_anomaly_mitigation": "off",
+            "load_balancing_cross_zone_enabled": "use_load_balancer_configuration",
+            "name": "User-TG",
+            "name_prefix": "",
+            "port": "8001",
+            "protocol": "HTTP",
+            "protocol_version": "HTTP1",
+            "region": "ap-northeast-2",
+            "slow_start": "0",
+            "stickiness.#": "1",
+            "stickiness.0.cookie_duration": "86400",
+            "stickiness.0.cookie_name": "",
+            "stickiness.0.enabled": "false",
+            "stickiness.0.type": "lb_cookie",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "target_failover.#": "1",
+            "target_group_health.#": "1",
+            "target_group_health.0.dns_failover.#": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_percentage": "off",
+            "target_group_health.0.unhealthy_state_routing.#": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_percentage": "off",
+            "target_health_state.#": "1",
+            "target_type": "ip",
+            "vpc_id": "vpc-0e043d21f57c0703e"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group",
+      "name": "tfer--info-final",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+            "arn_suffix": "targetgroup/info-final/de115e9d504e7a24",
+            "deregistration_delay": "300",
+            "health_check.#": "1",
+            "health_check.0.enabled": "true",
+            "health_check.0.healthy_threshold": "5",
+            "health_check.0.interval": "30",
+            "health_check.0.matcher": "200",
+            "health_check.0.path": "/health/",
+            "health_check.0.port": "traffic-port",
+            "health_check.0.protocol": "HTTP",
+            "health_check.0.timeout": "5",
+            "health_check.0.unhealthy_threshold": "2",
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+            "ip_address_type": "ipv4",
+            "load_balancer_arns.#": "1",
+            "load_balancer_arns.0": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:loadbalancer/app/info-final/5bd164072db03311",
+            "load_balancing_algorithm_type": "round_robin",
+            "load_balancing_anomaly_mitigation": "off",
+            "load_balancing_cross_zone_enabled": "use_load_balancer_configuration",
+            "name": "info-final",
+            "name_prefix": "",
+            "port": "8004",
+            "protocol": "HTTP",
+            "protocol_version": "HTTP1",
+            "region": "ap-northeast-2",
+            "slow_start": "0",
+            "stickiness.#": "1",
+            "stickiness.0.cookie_duration": "86400",
+            "stickiness.0.cookie_name": "",
+            "stickiness.0.enabled": "false",
+            "stickiness.0.type": "lb_cookie",
+            "tags.%": "0",
+            "tags_all.%": "0",
+            "target_failover.#": "1",
+            "target_group_health.#": "1",
+            "target_group_health.0.dns_failover.#": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.dns_failover.0.minimum_healthy_targets_percentage": "off",
+            "target_group_health.0.unhealthy_state_routing.#": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_count": "1",
+            "target_group_health.0.unhealthy_state_routing.0.minimum_healthy_targets_percentage": "off",
+            "target_health_state.#": "1",
+            "target_type": "ip",
+            "vpc_id": "vpc-0e043d21f57c0703e"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group_attachment",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-Board-TG-002F-2496cc953a68f155-10-002E-100-002E-128-002E-252",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155-10.100.128.252",
+            "region": "ap-northeast-2",
+            "target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155",
+            "target_id": "10.100.128.252"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group_attachment",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-Event-TG-002F-be5b96b559965beb-10-002E-100-002E-144-002E-20",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb-10.100.144.20",
+            "region": "ap-northeast-2",
+            "target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb",
+            "target_id": "10.100.144.20"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group_attachment",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-User-TG-002F-31e8920beb393a4f-10-002E-100-002E-153-002E-15",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f-10.100.153.15",
+            "region": "ap-northeast-2",
+            "target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f",
+            "target_id": "10.100.153.15"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lb_target_group_attachment",
+      "name": "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-targetgroup-002F-info-final-002F-de115e9d504e7a24-192-002E-168-002E-20-002E-190",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "id": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24-192.168.20.190",
+            "region": "ap-northeast-2",
+            "target_group_arn": "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/info-final/de115e9d504e7a24",
+            "target_id": "192.168.20.190"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
