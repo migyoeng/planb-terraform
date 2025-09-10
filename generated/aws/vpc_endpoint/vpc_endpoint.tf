@@ -33,5 +33,5 @@ resource "aws_vpc_endpoint" "tfer--vpce-0f7e3a4b10d87e195" {
   }
 
   vpc_endpoint_type = "Interface"
-  vpc_id            = "vpc-0e043d21f57c0703e"
+  vpc_id            = "aws_vpc.tfer--vpc-0e043d21f57c0703e"
 }
