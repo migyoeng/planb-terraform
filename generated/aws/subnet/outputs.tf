@@ -22,8 +22,3 @@ output "aws_subnet_tfer--subnet-0e08b5b05fdad2efc_id" {
   value = "${aws_subnet.tfer--subnet-0e08b5b05fdad2efc.id}"
 }
 
-
-output "aws_subnet_tfer--subnet-0f50d01bc8a354730_id" {
-  value = "${aws_subnet.tfer--subnet-0f50d01bc8a354730.id}"
-}
-
