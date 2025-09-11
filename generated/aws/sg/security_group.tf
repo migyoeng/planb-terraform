@@ -44,7 +44,7 @@ resource "aws_security_group" "tfer--ALB-SG_sg-04de431b39e807229" {
     Name = "ALB-SG"
   }
 
-  vpc_id = "vpc-0e043d21f57c0703e"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
 
 resource "aws_security_group" "tfer--DMS-SG_sg-07c55b43e8f90cfe2" {
@@ -76,7 +76,7 @@ resource "aws_security_group" "tfer--DMS-SG_sg-07c55b43e8f90cfe2" {
     Name = "DMS-SG"
   }
 
-  vpc_id = "vpc-0e043d21f57c0703e"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
 
 resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
@@ -101,7 +101,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
   ingress {
     from_port       = "8000"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id}"]
+    security_groups = [aws_security_group.tfer--ALB-SG_sg-04de431b39e807229.id]
     self            = "false"
     to_port         = "8000"
   }
@@ -109,7 +109,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
   ingress {
     from_port       = "8001"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id}"]
+    security_groups = [aws_security_group.tfer--ALB-SG_sg-04de431b39e807229.id]
     self            = "false"
     to_port         = "8001"
   }
@@ -117,7 +117,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
   ingress {
     from_port       = "8002"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id}"]
+    security_groups =[aws_security_group.tfer--ALB-SG_sg-04de431b39e807229.id]
     self            = "false"
     to_port         = "8002"
   }
@@ -125,7 +125,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
   ingress {
     from_port       = "8003"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id}"]
+    security_groups = [aws_security_group.tfer--ALB-SG_sg-04de431b39e807229.id]
     self            = "false"
     to_port         = "8003"
   }
@@ -133,7 +133,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
   ingress {
     from_port       = "8004"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id}"]
+    security_groups = [aws_security_group.tfer--ALB-SG_sg-04de431b39e807229.id]
     self            = "false"
     to_port         = "8004"
   }
@@ -149,7 +149,7 @@ resource "aws_security_group" "tfer--ECS-SG_sg-0dd82609d8f080a0f" {
     Name = "ECS-SG"
   }
 
-  vpc_id = "vpc-0e043d21f57c0703e"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
 
 resource "aws_security_group" "tfer--RDS-SG_sg-09dcb1de62d658b08" {
@@ -166,7 +166,7 @@ resource "aws_security_group" "tfer--RDS-SG_sg-09dcb1de62d658b08" {
   ingress {
     from_port       = "3306"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--DMS-SG_sg-07c55b43e8f90cfe2_id}", "${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ECS-SG_sg-0dd82609d8f080a0f_id}", "${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--launch-wizard-2_sg-05a3d749df6639fd1_id}"]
+    security_groups = [aws_security_group.tfer--DMS-SG_sg-07c55b43e8f90cfe2.id, aws_security_group.tfer--ECS-SG_sg-0dd82609d8f080a0f.id, aws_security_group.tfer--launch-wizard-2_sg-05a3d749df6639fd1.id]
     self            = "false"
     to_port         = "3306"
   }
@@ -182,7 +182,7 @@ resource "aws_security_group" "tfer--RDS-SG_sg-09dcb1de62d658b08" {
     Name = "RDS-SG"
   }
 
-  vpc_id = "vpc-0e043d21f57c0703e"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
 
 resource "aws_security_group" "tfer--VPC-EP-SG_sg-0fb55cc0d37e47a52" {
@@ -199,7 +199,7 @@ resource "aws_security_group" "tfer--VPC-EP-SG_sg-0fb55cc0d37e47a52" {
   ingress {
     from_port       = "443"
     protocol        = "tcp"
-    security_groups = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ECS-SG_sg-0dd82609d8f080a0f_id}"]
+    security_groups = [aws_security_group.tfer--ECS-SG_sg-0dd82609d8f080a0f.id]
     self            = "false"
     to_port         = "443"
   }
@@ -215,78 +215,7 @@ resource "aws_security_group" "tfer--VPC-EP-SG_sg-0fb55cc0d37e47a52" {
     Name = "VPC-EP-SG"
   }
 
-  vpc_id = "vpc-0e043d21f57c0703e"
-}
-
-resource "aws_security_group" "tfer--default_sg-0256328110b56a994" {
-  description = "default VPC security group"
-
-  egress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "0"
-    protocol    = "-1"
-    self        = "false"
-    to_port     = "0"
-  }
-
-  ingress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "443"
-    protocol    = "tcp"
-    self        = "false"
-    to_port     = "443"
-  }
-
-  ingress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "80"
-    protocol    = "tcp"
-    self        = "false"
-    to_port     = "80"
-  }
-
-  ingress {
-    from_port = "0"
-    protocol  = "-1"
-    self      = "true"
-    to_port   = "0"
-  }
-
-  name   = "default"
-  region = "ap-northeast-2"
-  vpc_id = "vpc-0e043d21f57c0703e"
-}
-
-resource "aws_security_group" "tfer--default_sg-05883384f9be33b25" {
-  description = "default VPC security group"
-
-  egress {
-    cidr_blocks = ["0.0.0.0/0"]
-    from_port   = "0"
-    protocol    = "-1"
-    self        = "false"
-    to_port     = "0"
-  }
-
-  ingress {
-    from_port = "0"
-    protocol  = "-1"
-    self      = "true"
-    to_port   = "0"
-  }
-
-  name   = "default"
-  region = "ap-northeast-2"
-
-  tags = {
-    Name = "default"
-  }
-
-  tags_all = {
-    Name = "default"
-  }
-
-  vpc_id = "vpc-06e9ddc7b84b869d1"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
 
 resource "aws_security_group" "tfer--launch-wizard-2_sg-05a3d749df6639fd1" {
@@ -318,5 +247,5 @@ resource "aws_security_group" "tfer--launch-wizard-2_sg-05a3d749df6639fd1" {
 
   name   = "launch-wizard-2"
   region = "ap-northeast-2"
-  vpc_id = "vpc-0e043d21f57c0703e"
+  vpc_id = "vpc-07c0ec2f9b90293b6"
 }
