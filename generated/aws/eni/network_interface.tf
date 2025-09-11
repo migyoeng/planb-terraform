@@ -7,7 +7,7 @@ resource "aws_network_interface" "tfer--eni-01b6af54923d675fe" {
   region             = "ap-northeast-2"
   security_groups    = ["sg-08952e289bce2de83"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0216a5e0a71ff754d"
+  subnet_id          = "subnet-00030d5625d1b53ef"   # RDS-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0360b6116e121ea9f" {
@@ -19,7 +19,7 @@ resource "aws_network_interface" "tfer--eni-0360b6116e121ea9f" {
   region             = "ap-northeast-2"
   security_groups    = ["sg-05a422c285d45b823"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0e01bb2f85ecf744e"
+  subnet_id          = "subnet-074b85fa6955ddbd5"   # PRI-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0401f525b76d15fb1" {
@@ -29,8 +29,9 @@ resource "aws_network_interface" "tfer--eni-0401f525b76d15fb1" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.1.153"]
   region             = "ap-northeast-2"
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "false"
-  subnet_id          = "subnet-05cae6e3d7ed60d1d"
+  subnet_id          = "subnet-04571057be0dbb468"   # PUB-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0779d6c0e3a03df3c" {
@@ -42,7 +43,7 @@ resource "aws_network_interface" "tfer--eni-0779d6c0e3a03df3c" {
   region             = "ap-northeast-2"
   security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0e01bb2f85ecf744e"
+  subnet_id          = "subnet-074b85fa6955ddbd5"   # PRI-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-07cd0fb55a213e389" {
@@ -54,20 +55,19 @@ resource "aws_network_interface" "tfer--eni-07cd0fb55a213e389" {
   region             = "ap-northeast-2"
   security_groups    = ["sg-05a422c285d45b823"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0cdac2dad409c8c65"
+  subnet_id          = "subnet-01d6b3f11339116d7"   # PRI-subnet-c
 }
 
 resource "aws_network_interface" "tfer--eni-07fa670621d4eb5c1" {
   description        = "VPC Endpoint Interface vpce-0f7e3a4b10d87e195"
-
   ipv4_prefix_count  = "0"
   ipv6_address_count = "0"
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.138.230"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-0fb55cc0d37e47a52"]
+  security_groups    = ["sg-09cfe825c5312b962"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0cdac2dad409c8c65"
+  subnet_id          = "subnet-01d6b3f11339116d7"   # PRI-subnet-c
 }
 
 resource "aws_network_interface" "tfer--eni-0942501e66bda79ab" {
@@ -77,9 +77,9 @@ resource "aws_network_interface" "tfer--eni-0942501e66bda79ab" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.28.223"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0b0000bb3e4e34fc8"
+  subnet_id          = "subnet-0f3ca2ae304d3f77a"   # PUB-subnet-c
 }
 
 resource "aws_network_interface" "tfer--eni-0a2d851c88b4bf1e3" {
@@ -89,9 +89,9 @@ resource "aws_network_interface" "tfer--eni-0a2d851c88b4bf1e3" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.169.225"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-09dcb1de62d658b08"]
+  security_groups    = ["sg-08952e289bce2de83"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0a5a63a27902ae96a"
+  subnet_id          = "subnet-0005302e59764fbec"   # RDS-subnet-c
 }
 
 resource "aws_network_interface" "tfer--eni-0a3a273fba081bfaa" {
@@ -99,12 +99,11 @@ resource "aws_network_interface" "tfer--eni-0a3a273fba081bfaa" {
   ipv4_prefix_count  = "0"
   ipv6_address_count = "0"
   ipv6_prefix_count  = "0"
-
   private_ip_list    = ["10.100.153.15"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-0dd82609d8f080a0f"]
+  security_groups    = ["sg-05a422c285d45b823"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0a5a63a27902ae96a"
+  subnet_id          = "subnet-00030d5625d1b53ef"   # RDS-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0b80cb1982ab47830" {
@@ -112,12 +111,11 @@ resource "aws_network_interface" "tfer--eni-0b80cb1982ab47830" {
   ipv4_prefix_count  = "0"
   ipv6_address_count = "0"
   ipv6_prefix_count  = "0"
-
   private_ip_list    = ["10.100.157.229"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-0fb55cc0d37e47a52"]
+  security_groups    = ["sg-09cfe825c5312b962"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0216a5e0a71ff754d"
+  subnet_id          = "subnet-00030d5625d1b53ef"   # RDS-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0ca221316507dbd45" {
@@ -125,12 +123,11 @@ resource "aws_network_interface" "tfer--eni-0ca221316507dbd45" {
   ipv4_prefix_count  = "0"
   ipv6_address_count = "0"
   ipv6_prefix_count  = "0"
-
   private_ip_list    = ["10.100.145.167"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0cdac2dad409c8c65"
+  subnet_id          = "subnet-01d6b3f11339116d7"   # PRI-subnet-c
 }
 
 resource "aws_network_interface" "tfer--eni-0cabedf961b37080d" {
@@ -140,22 +137,21 @@ resource "aws_network_interface" "tfer--eni-0cabedf961b37080d" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.140.154"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-09dcb1de62d658b08"]
+  security_groups    = ["sg-08952e289bce2de83"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0216a5e0a71ff754d"
+  subnet_id          = "subnet-00030d5625d1b53ef"   # RDS-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0d79480c9e32504af" {
   description        = "ELB app/DugOut-ALB/4e16ac14fd6170cb"
-
   ipv4_prefix_count  = "0"
   ipv6_address_count = "0"
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.2.77"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-05cae6e3d7ed60d1d"
+  subnet_id          = "subnet-04571057be0dbb468"   # PUB-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0e145efeab1d8f0cb" {
@@ -165,9 +161,9 @@ resource "aws_network_interface" "tfer--eni-0e145efeab1d8f0cb" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.128.71"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-07c55b43e8f90cfe2"]
+  security_groups    = ["sg-02e9a37254f66ce64"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0e01bb2f85ecf744e"
+  subnet_id          = "subnet-074b85fa6955ddbd5"   # PRI-subnet-a
 }
 
 resource "aws_network_interface" "tfer--eni-0e7302e0797b46b20" {
@@ -177,17 +173,17 @@ resource "aws_network_interface" "tfer--eni-0e7302e0797b46b20" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.141.137"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0cdac2dad409c8c65"
+  subnet_id          = "subnet-01d6b3f11339116d7"   # PRI-subnet-c
 
   tags = {
-    Owner     = "ops.apigateway.amazonaws.com"
+    Owner    = "ops.apigateway.amazonaws.com"
     VpcLinkId = "ucie4k"
   }
 
   tags_all = {
-    Owner     = "ops.apigateway.amazonaws.com"
+    Owner    = "ops.apigateway.amazonaws.com"
     VpcLinkId = "ucie4k"
   }
 }
@@ -199,17 +195,17 @@ resource "aws_network_interface" "tfer--eni-0f2623d112abcce58" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.148.57"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
-  subnet_id          = "subnet-0cdac2dad409c8c65"
+  subnet_id          = "subnet-01d6b3f11339116d7"   # PRI-subnet-c
 
   tags = {
-    Owner     = "ops.apigateway.amazonaws.com"
+    Owner    = "ops.apigateway.amazonaws.com"
     VpcLinkId = "ucie4k"
   }
 
   tags_all = {
-    Owner     = "ops.apigateway.amazonaws.com"
+    Owner    = "ops.apigateway.amazonaws.com"
     VpcLinkId = "ucie4k"
   }
 }
