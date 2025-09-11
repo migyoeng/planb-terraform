@@ -142,28 +142,3 @@ resource "aws_subnet" "tfer--subnet-0e08b5b05fdad2efc" {
 
   vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
-
-resource "aws_subnet" "tfer--subnet-0f50d01bc8a354730" {
-  assign_ipv6_address_on_creation                = "false"
-  cidr_block                                     = "172.31.32.0/20"
-  enable_dns64                                   = "false"
- 
-  enable_resource_name_dns_a_record_on_launch    = "false"
-  enable_resource_name_dns_aaaa_record_on_launch = "false"
-  ipv6_native                                    = "false"
-
-  map_public_ip_on_launch                        = "true"
-  private_dns_hostname_type_on_launch            = "ip-name"
-  region                                         = "ap-northeast-2"
-
-  tags = {
-    Name = "default"
-  }
-
-  tags_all = {
-    Name = "default"
-  }
-
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
-}
-
