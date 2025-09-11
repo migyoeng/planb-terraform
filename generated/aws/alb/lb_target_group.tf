@@ -1,4 +1,6 @@
 resource "aws_lb_target_group" "tfer--Board-TG" {
+  name        = "Board-TG"
+  vpc_id      = "vpc-07c0ec2f9b90293b6"
   deregistration_delay = "300"
 
   health_check {
@@ -17,7 +19,6 @@ resource "aws_lb_target_group" "tfer--Board-TG" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
-  name                              = "Board-TG"
   port                              = "8000"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -43,10 +44,11 @@ resource "aws_lb_target_group" "tfer--Board-TG" {
   }
 
   target_type = "ip"
-  vpc_id      = "vpc-0e043d21f57c0703e"
 }
 
 resource "aws_lb_target_group" "tfer--Event-TG" {
+  name                              = "Event-TG"
+  vpc_id      = "vpc-07c0ec2f9b90293b6"
   deregistration_delay = "300"
 
   health_check {
@@ -65,7 +67,6 @@ resource "aws_lb_target_group" "tfer--Event-TG" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
-  name                              = "Event-TG"
   port                              = "8002"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -91,10 +92,11 @@ resource "aws_lb_target_group" "tfer--Event-TG" {
   }
 
   target_type = "ip"
-  vpc_id      = "vpc-0e043d21f57c0703e"
 }
 
 resource "aws_lb_target_group" "tfer--News-TG" {
+  name         = "News-TG"
+   vpc_id      = "vpc-07c0ec2f9b90293b6"
   deregistration_delay = "300"
 
   health_check {
@@ -113,7 +115,7 @@ resource "aws_lb_target_group" "tfer--News-TG" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
-  name                              = "News-TG"
+ 
   port                              = "8003"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -139,10 +141,12 @@ resource "aws_lb_target_group" "tfer--News-TG" {
   }
 
   target_type = "ip"
-  vpc_id      = "vpc-0e043d21f57c0703e"
+ 
 }
 
 resource "aws_lb_target_group" "tfer--User-TG" {
+  name                              = "User-TG"
+  vpc_id      = "vpc-07c0ec2f9b90293b6"
   deregistration_delay = "300"
 
   health_check {
@@ -161,7 +165,6 @@ resource "aws_lb_target_group" "tfer--User-TG" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
-  name                              = "User-TG"
   port                              = "8001"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -187,10 +190,11 @@ resource "aws_lb_target_group" "tfer--User-TG" {
   }
 
   target_type = "ip"
-  vpc_id      = "vpc-0e043d21f57c0703e"
 }
 
 resource "aws_lb_target_group" "tfer--info-final" {
+  name                              = "info-final"
+  vpc_id      = "vpc-07c0ec2f9b90293b6"
   deregistration_delay = "300"
 
   health_check {
@@ -209,7 +213,6 @@ resource "aws_lb_target_group" "tfer--info-final" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
-  name                              = "info-final"
   port                              = "8004"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -235,5 +238,5 @@ resource "aws_lb_target_group" "tfer--info-final" {
   }
 
   target_type = "ip"
-  vpc_id      = "vpc-0e043d21f57c0703e"
+
 }

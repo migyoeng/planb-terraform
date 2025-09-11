@@ -1,19 +1,19 @@
-resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-36cb0d9ace7968a7" {
+resource "aws_lb_listener_rule" "tfer--Board-TG-rule" {
   action {
     forward {
       stickiness {
-        duration = "3600"
-        enabled  = "false"
+        duration = 3600
+        enabled  = false
       }
 
       target_group {
-        arn    = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155"
-        weight = "1"
+        arn    = aws_lb_target_group.tfer--Board-TG.arn
+        weight = 1
       }
     }
 
-    order            = "1"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155"
+    order            = 1
+    target_group_arn = aws_lb_target_group.tfer--Board-TG.arn
     type             = "forward"
   }
 
@@ -23,27 +23,27 @@ resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-00
     }
   }
 
-  listener_arn = "${aws_lb_listener.tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d.arn}"
-  priority     = "2"
+  listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
+  priority     = 2
   region       = "ap-northeast-2"
 }
 
-resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-4c04beb0de18890d" {
+resource "aws_lb_listener_rule" "tfer--User-TG-rule" {
   action {
     forward {
       stickiness {
-        duration = "3600"
-        enabled  = "false"
+        duration = 3600
+        enabled  = false
       }
 
       target_group {
-        arn    = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f"
-        weight = "1"
+        arn    = aws_lb_target_group.tfer--User-TG.arn
+        weight = 1
       }
     }
 
-    order            = "1"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f"
+    order            = 1
+    target_group_arn = aws_lb_target_group.tfer--User-TG.arn
     type             = "forward"
   }
 
@@ -53,27 +53,27 @@ resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-00
     }
   }
 
-  listener_arn = "${aws_lb_listener.tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d.arn}"
-  priority     = "1"
+  listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
+  priority     = 1
   region       = "ap-northeast-2"
 }
 
-resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-786e1888f62a53e0" {
+resource "aws_lb_listener_rule" "tfer--News-TG-rule" {
   action {
     forward {
       stickiness {
-        duration = "3600"
-        enabled  = "false"
+        duration = 3600
+        enabled  = false
       }
 
       target_group {
-        arn    = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89"
-        weight = "1"
+        arn    = aws_lb_target_group.tfer--News-TG.arn
+        weight = 1
       }
     }
 
-    order            = "1"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/News-TG/8b247acc3eb36d89"
+    order            = 1
+    target_group_arn = aws_lb_target_group.tfer--News-TG.arn
     type             = "forward"
   }
 
@@ -83,27 +83,27 @@ resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-00
     }
   }
 
-  listener_arn = "${aws_lb_listener.tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d.arn}"
-  priority     = "4"
+  listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
+  priority     = 4
   region       = "ap-northeast-2"
 }
 
-resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-rule-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d-002F-d4ec987314ed6bf6" {
+resource "aws_lb_listener_rule" "tfer--Event-TG-rule" {
   action {
     forward {
       stickiness {
-        duration = "3600"
-        enabled  = "false"
+        duration = 3600
+        enabled  = false
       }
 
       target_group {
-        arn    = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb"
-        weight = "1"
+        arn    = aws_lb_target_group.tfer--Event-TG.arn
+        weight = 1
       }
     }
 
-    order            = "1"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb"
+    order            = 1
+    target_group_arn = aws_lb_target_group.tfer--Event-TG.arn
     type             = "forward"
   }
 
@@ -113,7 +113,7 @@ resource "aws_lb_listener_rule" "tfer--arn-003A-aws-003A-elasticloadbalancing-00
     }
   }
 
-  listener_arn = "${aws_lb_listener.tfer--arn-003A-aws-003A-elasticloadbalancing-003A-ap-northeast-2-003A-726629337826-003A-listener-002F-app-002F-DugOut-ALB-002F-4e16ac14fd6170cb-002F-bd349d80f006d85d.arn}"
-  priority     = "3"
+  listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
+  priority     = 3
   region       = "ap-northeast-2"
 }

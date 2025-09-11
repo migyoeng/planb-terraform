@@ -17,13 +17,11 @@ resource "aws_lb" "tfer--DugOut-ALB" {
   preserve_host_header                        = false
   region                                      = "ap-northeast-2"
 
-  security_groups = [
-    data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id
-  ]
+  security_groups = ["sg-06eaadf0d776167dd"]
 
   subnets = [
-    data.terraform_remote_state.subnet.outputs.aws_subnet_tfer--subnet-02ef09cd4e75ad48e_id,
-    data.terraform_remote_state.subnet.outputs.aws_subnet_tfer--subnet-0b9a0280aa66167fe_id
+    "subnet-0f3ca2ae304d3f77a", # PUB-subnet-c
+    "subnet-04571057be0dbb468"  # PUB-subnet-a
   ]
 
   xff_header_processing_mode = "append"
@@ -48,13 +46,11 @@ resource "aws_lb" "tfer--info-final" {
   preserve_host_header                        = false
   region                                      = "ap-northeast-2"
 
-  security_groups = [
-    data.terraform_remote_state.sg.outputs.aws_security_group_tfer--ALB-SG_sg-04de431b39e807229_id
-  ]
+  security_groups = ["sg-06eaadf0d776167dd"]
 
   subnets = [
-    data.terraform_remote_state.subnet.outputs.aws_subnet_tfer--subnet-00258c4a6ac72c4ce_id,
-    data.terraform_remote_state.subnet.outputs.aws_subnet_tfer--subnet-0e08b5b05fdad2efc_id
+  "subnet-01d6b3f11339116d7", # PRI-subnet-c
+  "subnet-074b85fa6955ddbd5"  # PRI-subnet-a
   ]
 
   xff_header_processing_mode = "append"
