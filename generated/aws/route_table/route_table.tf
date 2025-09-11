@@ -58,25 +58,6 @@ resource "aws_route_table" "tfer--rtb-067cd938aa6bfff61" {
   vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
 
-resource "aws_route_table" "tfer--rtb-06fab9e30096236c1" {
-  region = "ap-northeast-2"
-
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = "igw-0607bbe983501fd1b"
-  }
-
-  tags = {
-    Name = "default"
-  }
-
-  tags_all = {
-    Name = "default"
-  }
-
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-06e9ddc7b84b869d1_id}"
-}
-
 resource "aws_route_table" "tfer--rtb-0ef557541f5e226ee" {
   region = "ap-northeast-2"
 
