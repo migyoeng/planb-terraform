@@ -1,4 +1,5 @@
 resource "aws_subnet" "tfer--subnet-00258c4a6ac72c4ce" {
+
   assign_ipv6_address_on_creation                = "false"
   cidr_block                                     = "10.100.128.0/20"
   enable_dns64                                   = "false"
@@ -10,6 +11,7 @@ resource "aws_subnet" "tfer--subnet-00258c4a6ac72c4ce" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2a"
 
   tags = {
     Name = "PRI-subnet-a"
@@ -23,6 +25,7 @@ resource "aws_subnet" "tfer--subnet-00258c4a6ac72c4ce" {
 }
 
 resource "aws_subnet" "tfer--subnet-02ef09cd4e75ad48e" {
+ 
   assign_ipv6_address_on_creation                = "false"
   cidr_block                                     = "10.100.16.0/20"
   enable_dns64                                   = "false"
@@ -34,6 +37,7 @@ resource "aws_subnet" "tfer--subnet-02ef09cd4e75ad48e" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2c"
 
   tags = {
     Name = "PUB-subnet-c"
@@ -48,6 +52,7 @@ resource "aws_subnet" "tfer--subnet-02ef09cd4e75ad48e" {
 
 
 resource "aws_subnet" "tfer--subnet-07e1138aac7e95c7c" {
+
   assign_ipv6_address_on_creation                = "false"
   cidr_block                                     = "10.100.176.0/20"
   enable_dns64                                   = "false"
@@ -59,6 +64,7 @@ resource "aws_subnet" "tfer--subnet-07e1138aac7e95c7c" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2c"
 
   tags = {
     Name = "RDS-subnet-c"
@@ -83,6 +89,7 @@ resource "aws_subnet" "tfer--subnet-0b9a0280aa66167fe" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2a"
 
   tags = {
     Name = "PUB-subnet-a"
@@ -107,6 +114,7 @@ resource "aws_subnet" "tfer--subnet-0dcde6507114a320f" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2a"
 
   tags = {
     Name = "RDS-subnet-a"
@@ -131,6 +139,7 @@ resource "aws_subnet" "tfer--subnet-0e08b5b05fdad2efc" {
   map_public_ip_on_launch                        = "false"
   private_dns_hostname_type_on_launch            = "ip-name"
   region                                         = "ap-northeast-2"
+  availability_zone                              = "ap-northeast-2c"
 
   tags = {
     Name = "PRI-subnet-c"

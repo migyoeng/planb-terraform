@@ -5,7 +5,7 @@ resource "aws_network_interface" "tfer--eni-01b6af54923d675fe" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.131.91"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-09dcb1de62d658b08"]
+  security_groups    = ["sg-08952e289bce2de83"]
   source_dest_check  = "true"
   subnet_id          = "subnet-0216a5e0a71ff754d"
 }
@@ -17,7 +17,7 @@ resource "aws_network_interface" "tfer--eni-0360b6116e121ea9f" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.128.252"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-0dd82609d8f080a0f"]
+  security_groups    = ["sg-05a422c285d45b823"]
   source_dest_check  = "true"
   subnet_id          = "subnet-0e01bb2f85ecf744e"
 }
@@ -40,7 +40,7 @@ resource "aws_network_interface" "tfer--eni-0779d6c0e3a03df3c" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.128.251"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-04de431b39e807229"]
+  security_groups    = ["sg-06eaadf0d776167dd"]
   source_dest_check  = "true"
   subnet_id          = "subnet-0e01bb2f85ecf744e"
 }
@@ -52,7 +52,7 @@ resource "aws_network_interface" "tfer--eni-07cd0fb55a213e389" {
   ipv6_prefix_count  = "0"
   private_ip_list    = ["10.100.144.20"]
   region             = "ap-northeast-2"
-  security_groups    = ["sg-0dd82609d8f080a0f"]
+  security_groups    = ["sg-05a422c285d45b823"]
   source_dest_check  = "true"
   subnet_id          = "subnet-0cdac2dad409c8c65"
 }
