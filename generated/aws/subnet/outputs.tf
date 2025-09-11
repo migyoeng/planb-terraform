@@ -6,10 +6,6 @@ output "aws_subnet_tfer--subnet-02ef09cd4e75ad48e_id" {
   value = "${aws_subnet.tfer--subnet-02ef09cd4e75ad48e.id}"
 }
 
-output "aws_subnet_tfer--subnet-04c4c4574509c0589_id" {
-  value = "${aws_subnet.tfer--subnet-04c4c4574509c0589.id}"
-}
-
 output "aws_subnet_tfer--subnet-07e1138aac7e95c7c_id" {
   value = "${aws_subnet.tfer--subnet-07e1138aac7e95c7c.id}"
 }
