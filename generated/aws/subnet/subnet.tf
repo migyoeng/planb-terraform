@@ -67,7 +67,7 @@ resource "aws_subnet" "tfer--subnet-04c4c4574509c0589" {
     Name = "default"
   }
 
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-06e9ddc7b84b869d1_id}"
+  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
 
 resource "aws_subnet" "tfer--subnet-07e1138aac7e95c7c" {
@@ -187,7 +187,7 @@ resource "aws_subnet" "tfer--subnet-0ea5cd17de4545e04" {
     Name = "default"
   }
 
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-06e9ddc7b84b869d1_id}"
+  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
 
 resource "aws_subnet" "tfer--subnet-0f50d01bc8a354730" {
@@ -211,7 +211,7 @@ resource "aws_subnet" "tfer--subnet-0f50d01bc8a354730" {
     Name = "default"
   }
 
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-06e9ddc7b84b869d1_id}"
+  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
 
 resource "aws_subnet" "tfer--subnet-0fe9b23c828a84458" {
@@ -235,5 +235,5 @@ resource "aws_subnet" "tfer--subnet-0fe9b23c828a84458" {
     Name = "default"
   }
 
-  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-06e9ddc7b84b869d1_id}"
+  vpc_id = "${data.terraform_remote_state.vpc.outputs.aws_vpc_tfer--vpc-0e043d21f57c0703e_id}"
 }
