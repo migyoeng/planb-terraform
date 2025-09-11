@@ -10,7 +10,7 @@ resource "aws_db_instance" "tfer--board-db" {
   customer_owned_ip_enabled             = "false"
   database_insights_mode                = "standard"
   db_name                               = "board_db"
-  db_subnet_group_name                  = "${aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name}"
+  db_subnet_group_name                  = aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name
   dedicated_log_volume                  = "false"
   deletion_protection                   = "false"
   engine                                = "mysql"
@@ -37,6 +37,7 @@ resource "aws_db_instance" "tfer--board-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
+  password                              = "DugOut2024!"
   vpc_security_group_ids                = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--RDS-SG_sg-09dcb1de62d658b08_id}"]
 }
 
@@ -52,7 +53,7 @@ resource "aws_db_instance" "tfer--event-db" {
   customer_owned_ip_enabled             = "false"
   database_insights_mode                = "standard"
   db_name                               = "event_db"
-  db_subnet_group_name                  = "${aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name}"
+  db_subnet_group_name                  = aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name
   dedicated_log_volume                  = "false"
   deletion_protection                   = "false"
   engine                                = "mysql"
@@ -79,6 +80,7 @@ resource "aws_db_instance" "tfer--event-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
+  password                              = "DugOut2024!"
   vpc_security_group_ids                = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--RDS-SG_sg-09dcb1de62d658b08_id}"]
 }
 
@@ -94,7 +96,7 @@ resource "aws_db_instance" "tfer--news-db" {
   customer_owned_ip_enabled             = "false"
   database_insights_mode                = "standard"
   db_name                               = "news_db"
-  db_subnet_group_name                  = "${aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name}"
+  db_subnet_group_name                  = aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.name
   dedicated_log_volume                  = "false"
   deletion_protection                   = "false"
   engine                                = "mysql"
@@ -121,5 +123,6 @@ resource "aws_db_instance" "tfer--news-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
+  password                              = "DugOut2024!"
   vpc_security_group_ids                = ["${data.terraform_remote_state.sg.outputs.aws_security_group_tfer--RDS-SG_sg-09dcb1de62d658b08_id}"]
 }
