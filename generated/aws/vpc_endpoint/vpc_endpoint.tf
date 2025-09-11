@@ -1,37 +1,62 @@
+# VPC 데이터 소스
+data "aws_vpc" "main" {
+  filter {
+    name   = "tag:Name"
+    values = ["DugOut-VPC"]
+  }
+}
+
+# 서브넷 데이터 소스
+data "aws_subnets" "private" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.main.id]
+  }
+  
+  filter {
+    name   = "tag:Name"
+    values = ["*private*"]
+  }
+}
+
+# Security Group 데이터 소스
+data "aws_security_group" "vpc_endpoint" {
+  filter {
+    name   = "group-name"
+    values = ["VPC-EP-SG"]
+  }
+  
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.main.id]
+  }
+}
+
 resource "aws_vpc_endpoint" "tfer--vpce-0f7e3a4b10d87e195" {
+  vpc_id              = data.aws_vpc.main.id
+  service_name        = "com.amazonaws.ap-northeast-2.secretsmanager"
+  vpc_endpoint_type   = "Interface"
+  subnet_ids          = data.aws_subnets.private.ids
+  security_group_ids  = [data.aws_security_group.vpc_endpoint.id]
+  private_dns_enabled = true
+
+  policy = jsonencode({
+    Statement = [
+      {
+        Action   = "*"
+        Effect   = "Allow"
+        Principal = "*"
+        Resource = "*"
+      }
+    ]
+  })
+
   dns_options {
     dns_record_ip_type                             = "ipv4"
-    private_dns_only_for_inbound_resolver_endpoint = "false"
+    private_dns_only_for_inbound_resolver_endpoint = false
   }
-
-  ip_address_type     = "ipv4"
-  policy              = "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Principal\":\"*\",\"Resource\":\"*\"}]}"
-  private_dns_enabled = "true"
-  region              = "ap-northeast-2"
-  security_group_ids  = ["sg-0fb55cc0d37e47a52"]
-  service_name        = "com.amazonaws.ap-northeast-2.secretsmanager"
-  service_region      = "ap-northeast-2"
-
-  subnet_configuration {
-    ipv4      = "10.100.138.230"
-    subnet_id = "subnet-00258c4a6ac72c4ce"
-  }
-
-  subnet_configuration {
-    ipv4      = "10.100.157.229"
-    subnet_id = "subnet-0e08b5b05fdad2efc"
-  }
-
-  subnet_ids = ["subnet-00258c4a6ac72c4ce", "subnet-0e08b5b05fdad2efc"]
 
   tags = {
     Name = "DugOut-VPC-Endpoint"
   }
-
-  tags_all = {
-    Name = "DugOut-VPC-Endpoint"
-  }
-
-  vpc_endpoint_type = "Interface"
-  vpc_id            = aws_vpc.tfer--vpc-0e043d21f57c0703e.id
 }
