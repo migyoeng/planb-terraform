@@ -90,5 +90,7 @@ resource "aws_secretsmanager_secret_version" "tfer--prod-002F-user-002F-mysql-vm
     user     = "ecs_svc"
     password = "Qwert12345!?"
     port     = 3306
+    engine   = "mysql"
+    dbname   = "user_service"
   })
 }
