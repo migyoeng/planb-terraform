@@ -116,6 +116,10 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020--3qqyl_ap-nor
   verification_message_template {
     default_email_option = "CONFIRM_WITH_CODE"
   }
+
+  lifecycle {
+    ignore_changes = [schema]
+  }
 }
 
 resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-ak0udl_ap-northeast-2_MOdLgYFJx" {
@@ -182,6 +186,10 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-ak0udl_ap-nor
 
   verification_message_template {
     default_email_option = "CONFIRM_WITH_CODE"
+  }
+
+  lifecycle {
+    ignore_changes = [schema]
   }
 }
 
@@ -311,6 +319,10 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-lrmgzt_ap-nor
   verification_message_template {
     default_email_option = "CONFIRM_WITH_CODE"
   }
+
+  lifecycle {
+    ignore_changes = [schema]
+  }
 }
 
 resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-u8og6_ap-northeast-2_5l8gegLlp" {
@@ -430,5 +442,9 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-u8og6_ap-nort
 
   verification_message_template {
     default_email_option = "CONFIRM_WITH_CODE"
+  }
+
+  lifecycle {
+    ignore_changes = [schema]
   }
 }

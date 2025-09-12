@@ -12,7 +12,6 @@ resource "aws_cognito_user_pool_client" "tfer--250822_test_783nooe1lkidr7l7ac91d
   name                                          = "250822_test"
   prevent_user_existence_errors                 = "ENABLED"
   refresh_token_validity                        = "5"
-  region                                        = "ap-northeast-2"
   supported_identity_providers                  = ["COGNITO"]
 
   token_validity_units {
@@ -21,7 +20,7 @@ resource "aws_cognito_user_pool_client" "tfer--250822_test_783nooe1lkidr7l7ac91d
     refresh_token = "days"
   }
 
-  user_pool_id = "ap-northeast-2_MA7vVC5Lw"
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020--3qqyl_ap-northeast-2_MA7vVC5Lw.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--My-0020-SPA-0020-app-0020---0020-ak0udl_62i5q9et3hjepf7kt8ujs5gkhu" {
@@ -54,7 +53,7 @@ resource "aws_cognito_user_pool_client" "tfer--My-0020-SPA-0020-app-0020---0020-
     refresh_token = "days"
   }
 
-  user_pool_id = "ap-northeast-2_MOdLgYFJx"
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-ak0udl_ap-northeast-2_MOdLgYFJx.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--dugout-main_3a58ij7t5e5va7qjkfdmjsghq" {
@@ -71,7 +70,6 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-main_3a58ij7t5e5va7qjkfdmj
   name                                          = "dugout-main"
   prevent_user_existence_errors                 = "ENABLED"
   refresh_token_validity                        = "5"
-  region                                        = "ap-northeast-2"
   supported_identity_providers                  = ["COGNITO"]
 
   token_validity_units {
@@ -80,7 +78,7 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-main_3a58ij7t5e5va7qjkfdmj
     refresh_token = "days"
   }
 
-  user_pool_id = "ap-northeast-2_KYxl8SX2a"
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--dugout-users-public_client_28m777op4t7t3ufms2f3197bp4" {
@@ -98,7 +96,6 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users-public_client_28m777
   name                                          = "dugout-users-public_client"
   prevent_user_existence_errors                 = "ENABLED"
   refresh_token_validity                        = "5"
-  region                                        = "ap-northeast-2"
   supported_identity_providers                  = ["COGNITO"]
 
   token_validity_units {
@@ -107,7 +104,7 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users-public_client_28m777
     refresh_token = "days"
   }
 
-  user_pool_id = "ap-northeast-2_5l8gegLlp"
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-u8og6_ap-northeast-2_5l8gegLlp.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea467887" {
@@ -126,7 +123,6 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea
   prevent_user_existence_errors                 = "ENABLED"
   read_attributes                               = ["address", "birthdate", "custom:favorite_team", "email", "email_verified", "family_name", "gender", "given_name", "locale", "middle_name", "name", "nickname", "phone_number", "phone_number_verified", "picture", "preferred_username", "profile", "updated_at", "website", "zoneinfo"]
   refresh_token_validity                        = "5"
-  region                                        = "ap-northeast-2"
   supported_identity_providers                  = ["COGNITO"]
 
   token_validity_units {
@@ -135,6 +131,6 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea
     refresh_token = "days"
   }
 
-  user_pool_id     = "ap-northeast-2_5l8gegLlp"
+  user_pool_id     = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-u8og6_ap-northeast-2_5l8gegLlp.id
   write_attributes = ["address", "birthdate", "custom:favorite_team", "email", "family_name", "gender", "given_name", "locale", "middle_name", "name", "nickname", "phone_number", "picture", "preferred_username", "profile", "updated_at", "website", "zoneinfo"]
 }
