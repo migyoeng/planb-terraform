@@ -1,6 +1,6 @@
 resource "aws_lb_target_group" "tfer--Board-TG" {
   name        = "Board-TG"
-  vpc_id      = "vpc-07c0ec2f9b90293b6"
+  vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -22,7 +22,6 @@ resource "aws_lb_target_group" "tfer--Board-TG" {
   port                              = "8000"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
-  region                            = "ap-northeast-2"
   slow_start                        = "0"
 
   stickiness {
@@ -48,7 +47,7 @@ resource "aws_lb_target_group" "tfer--Board-TG" {
 
 resource "aws_lb_target_group" "tfer--Event-TG" {
   name                              = "Event-TG"
-  vpc_id      = "vpc-07c0ec2f9b90293b6"
+  vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -70,7 +69,6 @@ resource "aws_lb_target_group" "tfer--Event-TG" {
   port                              = "8002"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
-  region                            = "ap-northeast-2"
   slow_start                        = "0"
 
   stickiness {
@@ -96,7 +94,7 @@ resource "aws_lb_target_group" "tfer--Event-TG" {
 
 resource "aws_lb_target_group" "tfer--News-TG" {
   name         = "News-TG"
-   vpc_id      = "vpc-07c0ec2f9b90293b6"
+   vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -119,7 +117,6 @@ resource "aws_lb_target_group" "tfer--News-TG" {
   port                              = "8003"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
-  region                            = "ap-northeast-2"
   slow_start                        = "0"
 
   stickiness {
@@ -146,7 +143,7 @@ resource "aws_lb_target_group" "tfer--News-TG" {
 
 resource "aws_lb_target_group" "tfer--User-TG" {
   name                              = "User-TG"
-  vpc_id      = "vpc-07c0ec2f9b90293b6"
+  vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -168,7 +165,6 @@ resource "aws_lb_target_group" "tfer--User-TG" {
   port                              = "8001"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
-  region                            = "ap-northeast-2"
   slow_start                        = "0"
 
   stickiness {
@@ -194,7 +190,7 @@ resource "aws_lb_target_group" "tfer--User-TG" {
 
 resource "aws_lb_target_group" "tfer--info-final" {
   name                              = "info-final"
-  vpc_id      = "vpc-07c0ec2f9b90293b6"
+  vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -216,7 +212,6 @@ resource "aws_lb_target_group" "tfer--info-final" {
   port                              = "8004"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
-  region                            = "ap-northeast-2"
   slow_start                        = "0"
 
   stickiness {

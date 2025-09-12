@@ -1,3 +1,34 @@
+# VPC 데이터 소스
+data "aws_vpc" "main" {
+  filter {
+    name   = "tag:Name"
+    values = ["DugOut-VPC"]
+  }
+}
+
+# Public 서브넷 데이터 소스
+data "aws_subnet" "pub_subnet_a" {
+  filter {
+    name   = "tag:Name"
+    values = ["PUB-subnet-a"]
+  }
+}
+
+data "aws_subnet" "pub_subnet_c" {
+  filter {
+    name   = "tag:Name"
+    values = ["PUB-subnet-c"]
+  }
+}
+
+# ALB Security Group 데이터 소스
+data "aws_security_group" "alb_sg" {
+  filter {
+    name   = "group-name"
+    values = ["ALB-SG"]
+  }
+}
+
 resource "aws_lb" "tfer--DugOut-ALB" {
   client_keep_alive                           = 3600
   desync_mitigation_mode                      = "defensive"
@@ -15,16 +46,30 @@ resource "aws_lb" "tfer--DugOut-ALB" {
   load_balancer_type                          = "application"
   name                                        = "DugOut-ALB"
   preserve_host_header                        = false
-  region                                      = "ap-northeast-2"
 
-  security_groups = ["sg-06eaadf0d776167dd"]
+  security_groups = [data.aws_security_group.alb_sg.id]
 
   subnets = [
-    "subnet-0f3ca2ae304d3f77a", # PUB-subnet-c
-    "subnet-04571057be0dbb468"  # PUB-subnet-a
+    data.aws_subnet.pub_subnet_a.id,
+    data.aws_subnet.pub_subnet_c.id
   ]
 
   xff_header_processing_mode = "append"
+}
+
+# Private 서브넷 데이터 소스
+data "aws_subnet" "pri_subnet_a" {
+  filter {
+    name   = "tag:Name"
+    values = ["PRI-subnet-a"]
+  }
+}
+
+data "aws_subnet" "pri_subnet_c" {
+  filter {
+    name   = "tag:Name"
+    values = ["PRI-subnet-c"]
+  }
 }
 
 resource "aws_lb" "tfer--info-final" {
@@ -44,13 +89,12 @@ resource "aws_lb" "tfer--info-final" {
   load_balancer_type                          = "application"
   name                                        = "info-final"
   preserve_host_header                        = false
-  region                                      = "ap-northeast-2"
 
-  security_groups = ["sg-06eaadf0d776167dd"]
+  security_groups = [data.aws_security_group.alb_sg.id]
 
   subnets = [
-  "subnet-01d6b3f11339116d7", # PRI-subnet-c
-  "subnet-074b85fa6955ddbd5"  # PRI-subnet-a
+    data.aws_subnet.pri_subnet_a.id,
+    data.aws_subnet.pri_subnet_c.id
   ]
 
   xff_header_processing_mode = "append"

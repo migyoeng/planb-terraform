@@ -1,3 +1,16 @@
+# ALB Target Group 데이터 소스들
+data "aws_lb_target_group" "board_tg" {
+  name = "Board-TG"
+}
+
+data "aws_lb_target_group" "event_tg" {
+  name = "Event-TG"
+}
+
+data "aws_lb_target_group" "user_tg" {
+  name = "User-TG"
+}
+
 resource "aws_ecs_service" "tfer--DUGOUT-CLUSTER_Board-Web-Task-service" {
   availability_zone_rebalancing = "DISABLED"
   cluster                       = "DUGOUT-CLUSTER"
@@ -22,7 +35,7 @@ resource "aws_ecs_service" "tfer--DUGOUT-CLUSTER_Board-Web-Task-service" {
   load_balancer {
     container_name   = "board-container"
     container_port   = "8000"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Board-TG/2496cc953a68f155"
+    target_group_arn = data.aws_lb_target_group.board_tg.arn
   }
 
   name = "Board-Web-Task-service"
@@ -63,7 +76,7 @@ resource "aws_ecs_service" "tfer--DUGOUT-CLUSTER_Event-Web-Task-service" {
   load_balancer {
     container_name   = "event-container"
     container_port   = "8002"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/Event-TG/be5b96b559965beb"
+    target_group_arn = data.aws_lb_target_group.event_tg.arn
   }
 
   name = "Event-Web-Task-service"
@@ -104,7 +117,7 @@ resource "aws_ecs_service" "tfer--DUGOUT-CLUSTER_User-Web-Task-service" {
   load_balancer {
     container_name   = "user-container"
     container_port   = "8001"
-    target_group_arn = "arn:aws:elasticloadbalancing:ap-northeast-2:726629337826:targetgroup/User-TG/31e8920beb393a4f"
+    target_group_arn = data.aws_lb_target_group.user_tg.arn
   }
 
   name = "User-Web-Task-service"

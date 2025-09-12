@@ -17,7 +17,6 @@ resource "aws_lb_listener" "tfer--DugOut-ALB" {
   load_balancer_arn                    = aws_lb.tfer--DugOut-ALB.arn
   port                                = 80
   protocol                            = "HTTP"
-  region                              = "ap-northeast-2"
   routing_http_response_server_enabled = true
 }
 
@@ -42,6 +41,5 @@ resource "aws_lb_listener" "tfer--info-final" {
   load_balancer_arn                    = aws_lb.tfer--info-final.arn
   port                                = 8004
   protocol                            = "HTTP"
-  region                              = "ap-northeast-2"
   routing_http_response_server_enabled = true
 }

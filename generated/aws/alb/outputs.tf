@@ -34,9 +34,7 @@ output "aws_lb_target_group_attachment_User_TG_id" {
   value = aws_lb_target_group_attachment.tfer--User-TG-attachment.id
 }
 
-output "aws_lb_target_group_attachment_info_final_id" {
-  value = aws_lb_target_group_attachment.tfer--info-final-attachment.id
-}
+# info-final attachment output은 온프레미스 서버이므로 제거
 
 output "aws_lb_target_group_tfer_Board_TG_id" {
   value = aws_lb_target_group.tfer--Board-TG.id

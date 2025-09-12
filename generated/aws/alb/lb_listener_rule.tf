@@ -25,7 +25,6 @@ resource "aws_lb_listener_rule" "tfer--Board-TG-rule" {
 
   listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
   priority     = 2
-  region       = "ap-northeast-2"
 }
 
 resource "aws_lb_listener_rule" "tfer--User-TG-rule" {
@@ -55,7 +54,6 @@ resource "aws_lb_listener_rule" "tfer--User-TG-rule" {
 
   listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
   priority     = 1
-  region       = "ap-northeast-2"
 }
 
 resource "aws_lb_listener_rule" "tfer--News-TG-rule" {
@@ -85,7 +83,6 @@ resource "aws_lb_listener_rule" "tfer--News-TG-rule" {
 
   listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
   priority     = 4
-  region       = "ap-northeast-2"
 }
 
 resource "aws_lb_listener_rule" "tfer--Event-TG-rule" {
@@ -115,5 +112,4 @@ resource "aws_lb_listener_rule" "tfer--Event-TG-rule" {
 
   listener_arn = aws_lb_listener.tfer--DugOut-ALB.arn
   priority     = 3
-  region       = "ap-northeast-2"
 }
