@@ -89,6 +89,32 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-lrmgzt_ap-nor
     }
   }
 
+  schema {
+    attribute_data_type      = "String"
+    developer_only_attribute = "false"
+    mutable                  = "true"
+    name                     = "date_joined"
+    required                 = "false"
+
+    string_attribute_constraints {
+      max_length = "10"
+      min_length = "10"
+    }
+  }
+
+  schema {
+    attribute_data_type      = "String"
+    developer_only_attribute = "false"
+    mutable                  = "true"
+    name                     = "team"
+    required                 = "false"
+
+    string_attribute_constraints {
+      max_length = "50"
+      min_length = "1"
+    }
+  }
+
   sign_in_policy {
     allowed_first_auth_factors = ["PASSWORD"]
   }
@@ -100,7 +126,7 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-lrmgzt_ap-nor
   }
 
   user_pool_tier      = "ESSENTIALS"
-  username_attributes = ["email"]
+  username_attributes = []
 
   username_configuration {
     case_sensitive = "false"
