@@ -14,6 +14,5 @@ resource "aws_apigatewayv2_api" "tfer--42z6qi4fnd_DugOut-API-Gateway" {
   ip_address_type              = "ipv4"
   name                         = "DugOut-API-Gateway"
   protocol_type                = "HTTP"
-  region                       = "ap-northeast-2"
   route_selection_expression   = "$request.method $request.path"
 }
