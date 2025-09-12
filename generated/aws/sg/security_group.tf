@@ -141,8 +141,7 @@ resource "aws_security_group" "tfer--RDS-SG_sg-09dcb1de62d658b08" {
     protocol        = "tcp"
     security_groups = [
       aws_security_group.tfer--DMS-SG_sg-07c55b43e8f90cfe2.id,
-      aws_security_group.tfer--ECS-SG_sg-0dd82609d8f080a0f.id,
-      aws_security_group.tfer--launch-wizard-2_sg-05a3d749df6639fd1.id
+      aws_security_group.tfer--ECS-SG_sg-0dd82609d8f080a0f.id
     ]
     to_port = 3306
   }
@@ -177,10 +176,10 @@ resource "aws_security_group" "tfer--VPC-EP-SG_sg-0fb55cc0d37e47a52" {
   }
 }
 
-# Launch Wizard Security Group
+# VPC Link Security Group
 resource "aws_security_group" "tfer--launch-wizard-2_sg-05a3d749df6639fd1" {
-  name        = "launch-wizard-2"
-  description = "Launch Wizard Security Group"
+  name        = "VPC-link-SG"
+  description = "VPC Link Security Group"
   vpc_id      = data.aws_vpc.main.id
 
   egress {
@@ -192,19 +191,12 @@ resource "aws_security_group" "tfer--launch-wizard-2_sg-05a3d749df6639fd1" {
 
   ingress {
     cidr_blocks = ["0.0.0.0/0"]
-    from_port   = 22
-    protocol    = "tcp"
-    to_port     = 22
-  }
-
-  ingress {
-    cidr_blocks = ["0.0.0.0/0"]
     from_port   = 80
     protocol    = "tcp"
     to_port     = 80
   }
 
   tags = {
-    Name = "launch-wizard-2"
+    Name = "VPC-link-SG"
   }
 }

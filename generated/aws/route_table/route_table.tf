@@ -26,20 +26,11 @@ resource "aws_route_table" "tfer--rtb-03a439676c94e13f9" {
   }
 }
 
-# Main Route Table
-resource "aws_route_table" "tfer--rtb-067cd938aa6bfff61" {
-  vpc_id = data.aws_vpc.main.id
-
-  tags = {
-    Name = "MAIN-RT"
-  }
-}
-
 # VPN Route Table
 resource "aws_route_table" "tfer--rtb-0ef557541f5e226ee" {
   vpc_id = data.aws_vpc.main.id
 
   tags = {
-    Name = "VPN-RT"
+    Name = "RDS-RT"
   }
 }

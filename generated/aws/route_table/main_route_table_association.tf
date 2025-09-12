@@ -22,7 +22,4 @@ data "aws_nat_gateway" "main" {
   }
 }
 
-resource "aws_main_route_table_association" "tfer--vpc-0e043d21f57c0703e" {
-  route_table_id = aws_route_table.tfer--rtb-067cd938aa6bfff61.id
-  vpc_id         = data.aws_vpc.main.id
-}
+# MAIN-RT가 삭제되어 main route table association도 제거됨

@@ -18,7 +18,7 @@ resource "aws_secretsmanager_secret" "tfer--prod-002F-news-002F-mysql" {
   name        = "prod/news/mysql-tf"
 }
 
-#resource "aws_secretsmanager_secret" "tfer--prod-002F-user-002F-mysql-vm" {
-#  description = "User 서비스에 연결할 데이터베이스 설정 값"
-#  name        = "prod/user/mysql-vm"
-##}
+resource "aws_secretsmanager_secret" "tfer--prod-002F-user-002F-mysql-vm" {
+  description = "User 서비스에 연결할 데이터베이스 설정 값"
+  name        = "prod/user/mysql-vm"
+}

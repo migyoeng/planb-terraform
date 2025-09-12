@@ -6,7 +6,7 @@ resource "aws_apigatewayv2_integration" "event_integration" {
   integration_type = "HTTP_PROXY"
   
   integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/event"
+  integration_uri    = "http://${data.aws_lb.alb.dns_name}:80/api/event/{proxy}"
   
   payload_format_version = "1.0"
 }
@@ -17,7 +17,7 @@ resource "aws_apigatewayv2_integration" "news_integration" {
   integration_type = "HTTP_PROXY"
   
   integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/news"
+  integration_uri    = "http://${data.aws_lb.alb.dns_name}:80/api/news/{proxy}"
   
   payload_format_version = "1.0"
 }
@@ -28,7 +28,7 @@ resource "aws_apigatewayv2_integration" "user_integration" {
   integration_type = "HTTP_PROXY"
   
   integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/user"
+  integration_uri    = "http://${data.aws_lb.alb.dns_name}:80/api/user/{proxy}"
   
   payload_format_version = "1.0"
 }
@@ -39,32 +39,32 @@ resource "aws_apigatewayv2_integration" "board_integration" {
   integration_type = "HTTP_PROXY"
   
   integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/board"
+  integration_uri    = "http://${data.aws_lb.alb.dns_name}:80/api/board/{proxy}"
   
   payload_format_version = "1.0"
 }
 
 # 정보 서비스 Integration (ALB 기반)
-resource "aws_apigatewayv2_integration" "info_integration" {
-  api_id           = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
-  integration_type = "HTTP_PROXY"
+# resource "aws_apigatewayv2_integration" "info_integration" {
+#   api_id           = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
+#   integration_type = "HTTP_PROXY"
   
-  integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/info"
+#   integration_method = "ANY"
+#   integration_uri    = "http://${data.aws_lb.alb.dns_name}/api/info"
   
-  payload_format_version = "1.0"
-}
+#   payload_format_version = "1.0"
+# }
 
 # 루트 API Integration (ECS 기반)
-resource "aws_apigatewayv2_integration" "api_root_integration" {
-  api_id           = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
-  integration_type = "HTTP_PROXY"
+# resource "aws_apigatewayv2_integration" "api_root_integration" {
+#   api_id           = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
+#   integration_type = "HTTP_PROXY"
   
-  integration_method = "ANY"
-  integration_uri    = "http://${data.aws_lb.alb.dns_name}/api"
+#   integration_method = "ANY"
+#   integration_uri    = "http://${data.aws_lb.alb.dns_name}/api"
   
-  payload_format_version = "1.0"
-}
+#   payload_format_version = "1.0"
+# }
 
 # ALB 데이터 소스
 data "aws_lb" "alb" {

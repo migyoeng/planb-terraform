@@ -27,16 +27,16 @@ resource "aws_apigatewayv2_route" "board_proxy" {
   target    = "integrations/${aws_apigatewayv2_integration.board_integration.id}"
 }
 
-# /api/info/{proxy+} - 정보 서비스 (온프레미스)
-resource "aws_apigatewayv2_route" "info_proxy" {
-  api_id    = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
-  route_key = "ANY /api/info/{proxy+}"
-  target    = "integrations/${aws_apigatewayv2_integration.info_integration.id}"
-}
+# /api/info/{proxy+} - 정보 서비스 (온프레미스) - Integration이 주석 처리되어 비활성화
+# resource "aws_apigatewayv2_route" "info_proxy" {
+#   api_id    = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
+#   route_key = "ANY /api/info/{proxy+}"
+#   target    = "integrations/${aws_apigatewayv2_integration.info_integration.id}"
+# }
 
-# /api - 루트 API 경로
-resource "aws_apigatewayv2_route" "api_root" {
-  api_id    = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
-  route_key = "ANY /api"
-  target    = "integrations/${aws_apigatewayv2_integration.api_root_integration.id}"
-}
+# /api - 루트 API 경로 - Integration이 주석 처리되어 비활성화
+# resource "aws_apigatewayv2_route" "api_root" {
+#   api_id    = aws_apigatewayv2_api.tfer--42z6qi4fnd_DugOut-API-Gateway.id
+#   route_key = "ANY /api"
+#   target    = "integrations/${aws_apigatewayv2_integration.api_root_integration.id}"
+# }
