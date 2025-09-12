@@ -22,3 +22,13 @@ resource "aws_secretsmanager_secret" "tfer--prod-002F-user-002F-mysql-vm" {
   description = "User 서비스에 연결할 데이터베이스 설정 값"
   name        = "prod/user/mysql-vm"
 }
+
+resource "aws_secretsmanager_secret_version" "tfer--prod-002F-user-002F-mysql-vm" {
+  secret_id     = aws_secretsmanager_secret.tfer--prod-002F-user-002F-mysql-vm.id
+  secret_string = jsonencode({
+    host     = "192.168.20.180"
+    user     = "ecs_svc"
+    password = "Qwert12345!?"
+    port     = 3306
+  })
+}
