@@ -1,3 +1,2 @@
-output "aws_cloudformation_stack_tfer--Infra-ECS-Cluster-DUGOUT-CLUSTER-0ad42402_id" {
-  value = "${aws_cloudformation_stack.tfer--Infra-ECS-Cluster-DUGOUT-CLUSTER-0ad42402.id}"
-}
+# CloudFormation 스택이 제거되었습니다.
+# ECS 클러스터는 ECS 모듈에서 관리됩니다.
