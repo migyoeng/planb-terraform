@@ -20,7 +20,7 @@ resource "aws_cognito_user_pool_client" "tfer--250822_test_783nooe1lkidr7l7ac91d
     refresh_token = "days"
   }
 
-  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020--3qqyl_ap-northeast-2_MA7vVC5Lw.id
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--My-0020-SPA-0020-app-0020---0020-ak0udl_62i5q9et3hjepf7kt8ujs5gkhu" {
@@ -53,7 +53,7 @@ resource "aws_cognito_user_pool_client" "tfer--My-0020-SPA-0020-app-0020---0020-
     refresh_token = "days"
   }
 
-  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-ak0udl_ap-northeast-2_MOdLgYFJx.id
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--dugout-main_3a58ij7t5e5va7qjkfdmjsghq" {
@@ -104,7 +104,7 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users-public_client_28m777
     refresh_token = "days"
   }
 
-  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-u8og6_ap-northeast-2_5l8gegLlp.id
+  user_pool_id = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a.id
 }
 
 resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea467887" {
@@ -121,7 +121,7 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea
   logout_urls                                   = ["http://localhost:8000/users/auth/loggedout", "https://dwreytuh5uwv5.cloudfront.net/test_main.html"]
   name                                          = "dugout-users"
   prevent_user_existence_errors                 = "ENABLED"
-  read_attributes                               = ["address", "birthdate", "custom:favorite_team", "email", "email_verified", "family_name", "gender", "given_name", "locale", "middle_name", "name", "nickname", "phone_number", "phone_number_verified", "picture", "preferred_username", "profile", "updated_at", "website", "zoneinfo"]
+  read_attributes                               = ["birthdate", "email", "name", "phone_number"]
   refresh_token_validity                        = "5"
   supported_identity_providers                  = ["COGNITO"]
 
@@ -131,6 +131,6 @@ resource "aws_cognito_user_pool_client" "tfer--dugout-users_45e0a4p1ivur4oas8sea
     refresh_token = "days"
   }
 
-  user_pool_id     = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-u8og6_ap-northeast-2_5l8gegLlp.id
-  write_attributes = ["address", "birthdate", "custom:favorite_team", "email", "family_name", "gender", "given_name", "locale", "middle_name", "name", "nickname", "phone_number", "picture", "preferred_username", "profile", "updated_at", "website", "zoneinfo"]
+  user_pool_id     = aws_cognito_user_pool.tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a.id
+  write_attributes = ["birthdate", "email", "name", "phone_number"]
 }
