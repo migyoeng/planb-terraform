@@ -1,6 +1,26 @@
+# RDS Remote State 데이터 소스
+data "terraform_remote_state" "rds" {
+  backend = "local"
+
+  config = {
+    path = "../../../generated/aws/rds/terraform.tfstate"
+  }
+}
+
 resource "aws_secretsmanager_secret" "tfer--prod-002F-board-002F-mysql" {
   description = "Board 서비스에 연결할 board_db 설정 값"
   name        = "prod/board/mysql-tf"
+}
+
+resource "aws_secretsmanager_secret_version" "tfer--prod-002F-board-002F-mysql" {
+  secret_id     = aws_secretsmanager_secret.tfer--prod-002F-board-002F-mysql.id
+  secret_string = jsonencode({
+    host     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--board-db_endpoint
+    user     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--board-db_username
+    password = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--board-db_password
+    port     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--board-db_port
+    database = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--board-db_db_name
+  })
 }
 
 resource "aws_secretsmanager_secret" "tfer--prod-002F-cognito-config" {
@@ -13,9 +33,31 @@ resource "aws_secretsmanager_secret" "tfer--prod-002F-event-002F-mysql" {
   name        = "prod/event/mysql-tf"
 }
 
+resource "aws_secretsmanager_secret_version" "tfer--prod-002F-event-002F-mysql" {
+  secret_id     = aws_secretsmanager_secret.tfer--prod-002F-event-002F-mysql.id
+  secret_string = jsonencode({
+    host     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--event-db_endpoint
+    user     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--event-db_username
+    password = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--event-db_password
+    port     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--event-db_port
+    database = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--event-db_db_name
+  })
+}
+
 resource "aws_secretsmanager_secret" "tfer--prod-002F-news-002F-mysql" {
   description = "News 서비스에 연결할 news_db 설정 값"
   name        = "prod/news/mysql-tf"
+}
+
+resource "aws_secretsmanager_secret_version" "tfer--prod-002F-news-002F-mysql" {
+  secret_id     = aws_secretsmanager_secret.tfer--prod-002F-news-002F-mysql.id
+  secret_string = jsonencode({
+    host     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--news-db_endpoint
+    user     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--news-db_username
+    password = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--news-db_password
+    port     = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--news-db_port
+    database = data.terraform_remote_state.rds.outputs.aws_db_instance_tfer--news-db_db_name
+  })
 }
 
 resource "aws_secretsmanager_secret" "tfer--prod-002F-user-002F-mysql-vm" {

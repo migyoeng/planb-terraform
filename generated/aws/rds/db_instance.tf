@@ -44,7 +44,7 @@ resource "aws_db_instance" "tfer--board-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
-  password                              = "DugOut2024!"
+  password                              = "soldesk12!!"
   vpc_security_group_ids                = [data.aws_security_group.rds_sg.id]
 }
 
@@ -86,7 +86,7 @@ resource "aws_db_instance" "tfer--event-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
-  password                              = "DugOut2024!"
+  password                              = "soldesk12!!"
   vpc_security_group_ids                = [data.aws_security_group.rds_sg.id]
 }
 
@@ -128,6 +128,6 @@ resource "aws_db_instance" "tfer--news-db" {
   storage_throughput                    = "0"
   storage_type                          = "gp2"
   username                              = "root"
-  password                              = "DugOut2024!"
+  password                              = "soldesk12!!"
   vpc_security_group_ids                = [data.aws_security_group.rds_sg.id]
 }
