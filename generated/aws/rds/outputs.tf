@@ -27,14 +27,10 @@ output "aws_db_parameter_group_tfer--dugout-pg_id" {
 #   value = aws_db_snapshot.tfer--rds-003A-event-db-2025-09-03-23-08.id
 # }
 
-output "aws_db_subnet_group_tfer--default-vpc-0953591a1f22f2f57_id" {
-  value = aws_db_subnet_group.tfer--default-vpc-0953591a1f22f2f57.id
+output "aws_db_subnet_group_main_rds_subnet_group_id" {
+  value = aws_db_subnet_group.main_rds_subnet_group.id
 }
 
-output "aws_db_subnet_group_tfer--default-vpc-0e043d21f57c0703e_id" {
-  value = aws_db_subnet_group.tfer--default-vpc-0e043d21f57c0703e.id
-}
-
-output "aws_db_subnet_group_tfer--dms-subnet_id" {
-  value = aws_db_subnet_group.tfer--dms-subnet.id
+output "aws_db_subnet_group_main_rds_subnet_group_name" {
+  value = aws_db_subnet_group.main_rds_subnet_group.name
 }
