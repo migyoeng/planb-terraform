@@ -1,3 +1,7 @@
-output "aws_eip_tfer--eipalloc-0f96659c79aaa38da_id" {
-  value = "${aws_eip.tfer--eipalloc-0f96659c79aaa38da.id}"
+output "eip_id" {
+  value = aws_eip.main.id
+}
+
+output "eip_public_ip" {
+  value = aws_eip.main.public_ip
 }
