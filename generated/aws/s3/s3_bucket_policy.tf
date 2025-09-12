@@ -1,7 +1,33 @@
+# CloudFront Remote State 데이터 소스
+data "terraform_remote_state" "cloudfront" {
+  backend = "local"
+
+  config = {
+    path = "../../../generated/aws/cloudfront/terraform.tfstate"
+  }
+}
+
 resource "aws_s3_bucket_policy" "tfer--dugout-frontend" {
-  bucket = "dugout-frontend"
-  policy = "{\"Id\":\"PolicyForCloudFrontPrivateContent\",\"Statement\":[{\"Action\":\"s3:GetObject\",\"Condition\":{\"StringEquals\":{\"AWS:SourceArn\":\"arn:aws:cloudfront::726629337826:distribution/E1NQOA9YMS3RQ6\"}},\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"cloudfront.amazonaws.com\"},\"Resource\":\"arn:aws:s3:::dugout-frontend/*\",\"Sid\":\"AllowCloudFrontServicePrincipal\"}],\"Version\":\"2008-10-17\"}"
-  region = "ap-northeast-2"
+  bucket = aws_s3_bucket.tfer--dugout-frontend.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid    = "AllowCloudFrontServicePrincipal"
+        Effect = "Allow"
+        Principal = {
+          Service = "cloudfront.amazonaws.com"
+        }
+        Action   = "s3:GetObject"
+        Resource = "${aws_s3_bucket.tfer--dugout-frontend.arn}/*"
+        Condition = {
+          StringEquals = {
+            "AWS:SourceArn" = "arn:aws:cloudfront::726629337826:distribution/${data.terraform_remote_state.cloudfront.outputs.aws_cloudfront_distribution_tfer--E1NQOA9YMS3RQ6_id}"
+          }
+        }
+      }
+    ]
+  })
 }
 
 resource "aws_s3_bucket_policy" "tfer--wjdwlstn12" {

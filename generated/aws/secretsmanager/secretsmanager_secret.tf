@@ -7,6 +7,15 @@ data "terraform_remote_state" "rds" {
   }
 }
 
+# Cognito Remote State 데이터 소스
+data "terraform_remote_state" "cognito" {
+  backend = "local"
+
+  config = {
+    path = "../../../generated/aws/cognito/terraform.tfstate"
+  }
+}
+
 resource "aws_secretsmanager_secret" "tfer--prod-002F-board-002F-mysql" {
   description = "Board 서비스에 연결할 board_db 설정 값"
   name        = "prod/board/mysql-tf"
@@ -26,6 +35,15 @@ resource "aws_secretsmanager_secret_version" "tfer--prod-002F-board-002F-mysql" 
 resource "aws_secretsmanager_secret" "tfer--prod-002F-cognito-config" {
   description = "Dugout Cognito User pool 및 client 설정 정보"
   name        = "prod/cognito-config-tf"
+}
+
+resource "aws_secretsmanager_secret_version" "tfer--prod-002F-cognito-config" {
+  secret_id     = aws_secretsmanager_secret.tfer--prod-002F-cognito-config.id
+  secret_string = jsonencode({
+    aws_region            = "ap-northeast-2"
+    aws_user_pool_id      = data.terraform_remote_state.cognito.outputs.aws_cognito_user_pool_tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a_id
+    aws_user_pool_client_id = data.terraform_remote_state.cognito.outputs.aws_cognito_user_pool_client_tfer--dugout-main_3a58ij7t5e5va7qjkfdmjsghq_id
+  })
 }
 
 resource "aws_secretsmanager_secret" "tfer--prod-002F-event-002F-mysql" {
