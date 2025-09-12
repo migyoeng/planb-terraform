@@ -22,19 +22,7 @@ output "aws_lb_listener_tfer_info_final_id" {
   value = aws_lb_listener.tfer--info-final.id
 }
 
-output "aws_lb_target_group_attachment_Board_TG_id" {
-  value = aws_lb_target_group_attachment.tfer--Board-TG-attachment.id
-}
-
-output "aws_lb_target_group_attachment_Event_TG_id" {
-  value = aws_lb_target_group_attachment.tfer--Event-TG-attachment.id
-}
-
-output "aws_lb_target_group_attachment_User_TG_id" {
-  value = aws_lb_target_group_attachment.tfer--User-TG-attachment.id
-}
-
-# info-final attachment output은 온프레미스 서버이므로 제거
+# Target Group Attachment outputs는 삭제된 리소스이므로 제거됨
 
 output "aws_lb_target_group_tfer_Board_TG_id" {
   value = aws_lb_target_group.tfer--Board-TG.id

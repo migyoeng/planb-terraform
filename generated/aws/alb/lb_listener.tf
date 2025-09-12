@@ -1,9 +1,17 @@
+# CloudFront Distribution 데이터 소스
+data "terraform_remote_state" "cloudfront" {
+  backend = "local"
+  config = {
+    path = "../cloudfront/terraform.tfstate"
+  }
+}
+
 resource "aws_lb_listener" "tfer--DugOut-ALB" {
   default_action {
     order = 1
 
     redirect {
-      host        = "d18wspy7xouagh.cloudfront.net"
+      host        = data.terraform_remote_state.cloudfront.outputs.aws_cloudfront_distribution_tfer--E1NQOA9YMS3RQ6_domain_name
       path        = "/#{path}"
       port        = "#{port}"
       protocol    = "HTTPS"
