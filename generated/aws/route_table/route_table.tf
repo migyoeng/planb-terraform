@@ -16,13 +16,13 @@ resource "aws_route_table" "tfer--rtb-02e2b0e7d5ba0d441" {
 resource "aws_route_table" "tfer--rtb-03a439676c94e13f9" {
   vpc_id = data.aws_vpc.main.id
 
-  route {
-    cidr_block     = "0.0.0.0/0"
-    nat_gateway_id = data.aws_nat_gateway.main.id
-  }
+  # route {
+  #   cidr_block     = "0.0.0.0/0"
+  #   nat_gateway_id = data.aws_nat_gateway.main.id
+  # }
 
   tags = {
-    Name = "PRIV-RT"
+    Name = "PRI-RT"
   }
 }
 

@@ -40,6 +40,7 @@ resource "aws_db_instance" "tfer--board-db" {
   performance_insights_retention_period = "0"
   port                                  = "3306"
   publicly_accessible                   = "false"
+  skip_final_snapshot                   = true
   storage_encrypted                     = "false"
   storage_throughput                    = "0"
   storage_type                          = "gp2"
@@ -52,7 +53,7 @@ resource "aws_db_instance" "tfer--event-db" {
   allocated_storage                     = "20"
   auto_minor_version_upgrade            = "true"
   availability_zone                     = "ap-northeast-2a"
-  backup_retention_period               = "1"
+  backup_retention_period               = "0"
   backup_target                         = "region"
   backup_window                         = "18:29-18:59"
   ca_cert_identifier                    = "rds-ca-rsa2048-g1"
@@ -82,6 +83,7 @@ resource "aws_db_instance" "tfer--event-db" {
   performance_insights_retention_period = "0"
   port                                  = "3306"
   publicly_accessible                   = "true"
+  skip_final_snapshot                   = true
   storage_encrypted                     = "false"
   storage_throughput                    = "0"
   storage_type                          = "gp2"
@@ -124,6 +126,7 @@ resource "aws_db_instance" "tfer--news-db" {
   performance_insights_retention_period = "0"
   port                                  = "3306"
   publicly_accessible                   = "false"
+  skip_final_snapshot                   = true
   storage_encrypted                     = "false"
   storage_throughput                    = "0"
   storage_type                          = "gp2"

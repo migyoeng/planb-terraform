@@ -1,3 +1,15 @@
+# Origin Access Control 생성
+resource "aws_cloudfront_origin_access_control" "dugout_frontend_oac" {
+  name                              = "dugout-frontend-oac"
+  description                       = "OAC for dugout-frontend S3 bucket"
+  origin_access_control_origin_type = "s3"
+  signing_behavior                  = "always"
+  signing_protocol                  = "sigv4"
+}
+
+# AWS 계정 정보 데이터 소스
+data "aws_caller_identity" "current" {}
+
 resource "aws_cloudfront_distribution" "tfer--E1NQOA9YMS3RQ6" {
   comment = "Dugout 배포"
 
@@ -29,7 +41,7 @@ resource "aws_cloudfront_distribution" "tfer--E1NQOA9YMS3RQ6" {
     max_ttl                = "0"
     min_ttl                = "0"
     smooth_streaming       = "false"
-    target_origin_id       = "dugout-frontend.s3.ap-northeast-2.amazonaws.com-mew7umt2z7f"
+    target_origin_id       = "dugout-frontend-test.s3.ap-northeast-2.amazonaws.com-mew7umt2z7f"
     viewer_protocol_policy = "redirect-to-https"
   }
 
@@ -40,9 +52,9 @@ resource "aws_cloudfront_distribution" "tfer--E1NQOA9YMS3RQ6" {
   origin {
     connection_attempts      = "3"
     connection_timeout       = "10"
-    domain_name              = "dugout-frontend.s3.ap-northeast-2.amazonaws.com"
-    origin_access_control_id = "E101ZHIFTU0RY2"
-    origin_id                = "dugout-frontend.s3.ap-northeast-2.amazonaws.com-mew7umt2z7f"
+    domain_name              = "dugout-frontend-test.s3.ap-northeast-2.amazonaws.com"
+    origin_access_control_id = aws_cloudfront_origin_access_control.dugout_frontend_oac.id
+    origin_id                = "dugout-frontend-test.s3.ap-northeast-2.amazonaws.com-mew7umt2z7f"
   }
 
   price_class = "PriceClass_All"

@@ -1,10 +1,10 @@
 resource "aws_cognito_user_pool_client" "tfer--dugout-main_3a58ij7t5e5va7qjkfdmjsghq" {
   access_token_validity                         = "60"
-  allowed_oauth_flows                           = ["code"]
-  allowed_oauth_flows_user_pool_client          = "true"
-  allowed_oauth_scopes                          = ["email", "openid", "phone"]
+  # allowed_oauth_flows                           = ["code"]
+  # allowed_oauth_flows_user_pool_client          = "true"
+  # allowed_oauth_scopes                          = ["email", "openid", "phone"]
   auth_session_validity                         = "3"
-  callback_urls                                 = ["http://localhost:5173/"]
+  # callback_urls                                 = ["http://localhost:5173/"]
   enable_propagate_additional_user_context_data = "false"
   enable_token_revocation                       = "true"
   explicit_auth_flows                           = ["ALLOW_REFRESH_TOKEN_AUTH", "ALLOW_USER_AUTH", "ALLOW_USER_SRP_AUTH"]

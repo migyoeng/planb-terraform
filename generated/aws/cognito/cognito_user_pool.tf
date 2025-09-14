@@ -1,3 +1,30 @@
+# AWS 계정 정보 데이터 소스
+data "aws_caller_identity" "current" {}
+
+# Cognito용 SNS Role 생성
+# resource "aws_iam_role" "cognito_sns_role" {
+#   name = "CognitoIdpSNSServiceRole"
+
+#   assume_role_policy = jsonencode({
+#     Version = "2012-10-17"
+#     Statement = [
+#       {
+#         Action = "sts:AssumeRole"
+#         Effect = "Allow"
+#         Principal = {
+#           Service = "cognito-idp.amazonaws.com"
+#         }
+#       }
+#     ]
+#   })
+# }
+
+# # SNS 정책 연결
+# resource "aws_iam_role_policy_attachment" "cognito_sns_policy" {
+#   role       = aws_iam_role.cognito_sns_role.name
+#   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonCognitoIdpServiceRole"
+# }
+
 resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-lrmgzt_ap-northeast-2_KYxl8SX2a" {
   account_recovery_setting {
     recovery_mechanism {
@@ -119,11 +146,11 @@ resource "aws_cognito_user_pool" "tfer--User-0020-pool-0020---0020-lrmgzt_ap-nor
     allowed_first_auth_factors = ["PASSWORD"]
   }
 
-  sms_configuration {
-    external_id    = "455f12a7-77f3-4828-b2d3-aa280302a0ce"
-    sns_caller_arn = "arn:aws:iam::726629337826:role/service-role/CognitoIdpSNSServiceRole"
-    sns_region     = "ap-northeast-1"
-  }
+  # sms_configuration {
+  #   external_id    = "455f12a7-77f3-4828-b2d3-aa280302a0ce"
+  #   sns_caller_arn = aws_iam_role.cognito_sns_role.arn
+  #   sns_region     = "ap-northeast-1"
+  # }
 
   user_pool_tier      = "ESSENTIALS"
   username_attributes = []

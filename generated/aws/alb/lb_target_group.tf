@@ -94,7 +94,7 @@ resource "aws_lb_target_group" "tfer--Event-TG" {
 
 resource "aws_lb_target_group" "tfer--News-TG" {
   name         = "News-TG"
-   vpc_id      = data.aws_vpc.main.id
+  vpc_id      = data.aws_vpc.main.id
   deregistration_delay = "300"
 
   health_check {
@@ -113,7 +113,6 @@ resource "aws_lb_target_group" "tfer--News-TG" {
   load_balancing_algorithm_type     = "round_robin"
   load_balancing_anomaly_mitigation = "off"
   load_balancing_cross_zone_enabled = "use_load_balancer_configuration"
- 
   port                              = "8003"
   protocol                          = "HTTP"
   protocol_version                  = "HTTP1"
@@ -138,7 +137,6 @@ resource "aws_lb_target_group" "tfer--News-TG" {
   }
 
   target_type = "ip"
- 
 }
 
 resource "aws_lb_target_group" "tfer--User-TG" {
@@ -233,5 +231,4 @@ resource "aws_lb_target_group" "tfer--info-final" {
   }
 
   target_type = "ip"
-
 }
